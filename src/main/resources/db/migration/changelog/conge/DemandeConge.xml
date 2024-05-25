@@ -1,0 +1,109 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="demande_conge">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="ref" type="VARCHAR(500)"/>
+        <column name="contenu" type="VARCHAR(500)"/>
+        <column name="date_depart" type="TIMESTAMP"/>
+        <column name="date_fin" type="TIMESTAMP"/>
+        <column name="nombre_jour" type="BIGINT"/>
+
+        <column name="motif_rejet_demande_conge_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="manager_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="agent_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="raison_conge_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="etat_demande_conge_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="entite_administrative_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="demande_conge"
+              baseColumnNames="motif_rejet_demande_conge_id"
+              referencedTableName="motif_rejet_demande_conge"
+              referencedColumnNames="id"
+              constraintName="fk_demande_conge_motif_rejet_demande_conge"/>
+      <addForeignKeyConstraint
+              baseTableName="demande_conge"
+              baseColumnNames="manager_id"
+              referencedTableName="manager"
+              referencedColumnNames="id"
+              constraintName="fk_demande_conge_manager"/>
+      <addForeignKeyConstraint
+              baseTableName="demande_conge"
+              baseColumnNames="agent_id"
+              referencedTableName="agent"
+              referencedColumnNames="id"
+              constraintName="fk_demande_conge_agent"/>
+      <addForeignKeyConstraint
+              baseTableName="demande_conge"
+              baseColumnNames="raison_conge_id"
+              referencedTableName="raison_conge"
+              referencedColumnNames="id"
+              constraintName="fk_demande_conge_raison_conge"/>
+      <addForeignKeyConstraint
+              baseTableName="demande_conge"
+              baseColumnNames="etat_demande_conge_id"
+              referencedTableName="etat_demande_conge"
+              referencedColumnNames="id"
+              constraintName="fk_demande_conge_etat_demande_conge"/>
+      <addForeignKeyConstraint
+              baseTableName="demande_conge"
+              baseColumnNames="entite_administrative_id"
+              referencedTableName="entite_administrative"
+              referencedColumnNames="id"
+              constraintName="fk_demande_conge_entite_administrative"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="demande_conge_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/conge/DemandeConge.csv"
+            tableName="demande_conge">
+      <column name="id" type="NUMERIC"/>
+          <column name="ref" type="STRING"/>
+          <column name="contenu" type="STRING"/>
+          <column name="date_depart" type="TIMESTAMP"/>
+          <column name="date_fin" type="TIMESTAMP"/>
+          <column name="nombre_jour" type="NUMERIC"/>
+        <column name="motif_rejet_demande_conge" type="BIGINT"/>
+        <column name="manager" type="BIGINT"/>
+        <column name="agent" type="BIGINT"/>
+        <column name="raison_conge" type="BIGINT"/>
+        <column name="etat_demande_conge" type="BIGINT"/>
+        <column name="entite_administrative" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

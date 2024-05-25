@@ -1,0 +1,73 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="paiement_agent">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="ref" type="VARCHAR(500)"/>
+        <column name="mois" type="BIGINT"/>
+        <column name="annee" type="BIGINT"/>
+        <column name="thm" type="NUMERIC"/>
+        <column name="total_horaire_travail" type="BIGINT"/>
+        <column name="montant_horaire_travail" type="NUMERIC"/>
+        <column name="total_horaire_absence" type="NUMERIC"/>
+        <column name="montant_horaire_absence" type="NUMERIC"/>
+        <column name="total_horaire_supplementaire" type="NUMERIC"/>
+        <column name="montant_horaire_supplementaire" type="NUMERIC"/>
+        <column name="salaire_base" type="NUMERIC"/>
+        <column name="salaire" type="NUMERIC"/>
+
+        <column name="agent_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="paiement_agent"
+              baseColumnNames="agent_id"
+              referencedTableName="agent"
+              referencedColumnNames="id"
+              constraintName="fk_paiement_agent_agent"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="paiement_agent_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/commun/PaiementAgent.csv"
+            tableName="paiement_agent">
+      <column name="id" type="NUMERIC"/>
+          <column name="ref" type="STRING"/>
+          <column name="mois" type="NUMERIC"/>
+          <column name="annee" type="NUMERIC"/>
+          <column name="thm" type="NUMERIC"/>
+          <column name="total_horaire_travail" type="NUMERIC"/>
+          <column name="montant_horaire_travail" type="NUMERIC"/>
+          <column name="total_horaire_absence" type="NUMERIC"/>
+          <column name="montant_horaire_absence" type="NUMERIC"/>
+          <column name="total_horaire_supplementaire" type="NUMERIC"/>
+          <column name="montant_horaire_supplementaire" type="NUMERIC"/>
+          <column name="salaire_base" type="NUMERIC"/>
+          <column name="salaire" type="NUMERIC"/>
+        <column name="agent" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>
