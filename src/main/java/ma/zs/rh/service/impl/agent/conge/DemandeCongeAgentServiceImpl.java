@@ -284,8 +284,8 @@ public class DemandeCongeAgentServiceImpl implements DemandeCongeAgentService {
     public void findOrSaveAssociatedObject(DemandeConge t){
         if( t != null) {
             t.setMotifRejetDemandeConge(motifRejetDemandeCongeService.findOrSave(t.getMotifRejetDemandeConge()));
-            t.setManager(agentService.findOrSave(t.getManager()));
-            t.setAgent(agentService.findOrSave(t.getAgent()));
+//            t.setManager(agentService.findOrSave(t.getManager()));
+//            t.setAgent(agentService.findOrSave(t.getAgent()));
             t.setRaisonConge(raisonCongeService.findOrSave(t.getRaisonConge()));
             t.setEtatDemandeConge(etatDemandeCongeService.findOrSave(t.getEtatDemandeConge()));
             t.setEntiteAdministrative(entiteAdministrativeService.findOrSave(t.getEntiteAdministrative()));

@@ -17,7 +17,9 @@ public class PlageHoraireDto  extends AuditBaseDto {
 
     private String ref  ;
     private String typeHoraire  ;
+
     private String heureDebut ;
+    private String heureFin ;
 
 
 
@@ -45,7 +47,7 @@ public class PlageHoraireDto  extends AuditBaseDto {
     }
 
     @Log
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
     public String getHeureDebut(){
         return this.heureDebut;
     }
@@ -53,11 +55,12 @@ public class PlageHoraireDto  extends AuditBaseDto {
         this.heureDebut = heureDebut;
     }
 
-
-
-
-
-
-
-
+    @Log
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
+    public String getHeureFin() {
+        return heureFin;
+    }
+    public void setHeureFin(String heureFin) {
+        this.heureFin = heureFin;
+    }
 }
