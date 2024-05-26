@@ -42,33 +42,33 @@ public class AgentRestAgent {
 
 
 
-    @Operation(summary = "Finds a list of all agents")
-    @GetMapping("")
-    public ResponseEntity<List<AgentDto>> findAll() throws Exception {
-        ResponseEntity<List<AgentDto>> res = null;
-        List<Agent> list = service.findAll();
-        HttpStatus status = HttpStatus.NO_CONTENT;
-            converter.initObject(true);
-        List<AgentDto> dtos  = converter.toDto(list);
-        if (dtos != null && !dtos.isEmpty())
-            status = HttpStatus.OK;
-        res = new ResponseEntity<>(dtos, status);
-        return res;
-    }
+//    @Operation(summary = "Finds a list of all agents")
+//    @GetMapping("")
+//    public ResponseEntity<List<AgentDto>> findAll() throws Exception {
+//        ResponseEntity<List<AgentDto>> res = null;
+//        List<Agent> list = service.findAll();
+//        HttpStatus status = HttpStatus.NO_CONTENT;
+//            converter.initObject(true);
+//        List<AgentDto> dtos  = converter.toDto(list);
+//        if (dtos != null && !dtos.isEmpty())
+//            status = HttpStatus.OK;
+//        res = new ResponseEntity<>(dtos, status);
+//        return res;
+//    }
 
-    @Operation(summary = "Finds an optimized list of all agents")
-    @GetMapping("optimized")
-    public ResponseEntity<List<AgentDto>> findAllOptimized() throws Exception {
-        ResponseEntity<List<AgentDto>> res = null;
-        List<Agent> list = service.findAllOptimized();
-        HttpStatus status = HttpStatus.NO_CONTENT;
-        converter.initObject(true);
-        List<AgentDto> dtos  = converter.toDto(list);
-        if (dtos != null && !dtos.isEmpty())
-            status = HttpStatus.OK;
-        res = new ResponseEntity<>(dtos, status);
-        return res;
-    }
+//    @Operation(summary = "Finds an optimized list of all agents")
+//    @GetMapping("optimized")
+//    public ResponseEntity<List<AgentDto>> findAllOptimized() throws Exception {
+//        ResponseEntity<List<AgentDto>> res = null;
+//        List<Agent> list = service.findAllOptimized();
+//        HttpStatus status = HttpStatus.NO_CONTENT;
+//        converter.initObject(true);
+//        List<AgentDto> dtos  = converter.toDto(list);
+//        if (dtos != null && !dtos.isEmpty())
+//            status = HttpStatus.OK;
+//        res = new ResponseEntity<>(dtos, status);
+//        return res;
+//    }
 
     @Operation(summary = "Finds a agent by id")
     @GetMapping("id/{id}")
@@ -94,117 +94,117 @@ public class AgentRestAgent {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @Operation(summary = "Saves the specified  agent")
-    @PostMapping("")
-    public ResponseEntity<AgentDto> save(@RequestBody AgentDto dto) throws Exception {
-        if(dto!=null){
-            converter.init(true);
-            Agent myT = converter.toItem(dto);
-            Agent t = service.create(myT);
-            if (t == null) {
-                return new ResponseEntity<>(null, HttpStatus.IM_USED);
-            }else{
-                AgentDto myDto = converter.toDto(t);
-                return new ResponseEntity<>(myDto, HttpStatus.CREATED);
-            }
-        }else {
-            return new ResponseEntity<>(dto, HttpStatus.NO_CONTENT);
-        }
-    }
+//    @Operation(summary = "Saves the specified  agent")
+//    @PostMapping("")
+//    public ResponseEntity<AgentDto> save(@RequestBody AgentDto dto) throws Exception {
+//        if(dto!=null){
+//            converter.init(true);
+//            Agent myT = converter.toItem(dto);
+//            Agent t = service.create(myT);
+//            if (t == null) {
+//                return new ResponseEntity<>(null, HttpStatus.IM_USED);
+//            }else{
+//                AgentDto myDto = converter.toDto(t);
+//                return new ResponseEntity<>(myDto, HttpStatus.CREATED);
+//            }
+//        }else {
+//            return new ResponseEntity<>(dto, HttpStatus.NO_CONTENT);
+//        }
+//    }
 
-    @Operation(summary = "Updates the specified  agent")
-    @PutMapping("")
-    public ResponseEntity<AgentDto> update(@RequestBody AgentDto dto) throws Exception {
-        ResponseEntity<AgentDto> res ;
-        if (dto.getId() == null || service.findById(dto.getId()) == null)
-            res = new ResponseEntity<>(HttpStatus.CONFLICT);
-        else {
-            Agent t = service.findById(dto.getId());
-            converter.copy(dto,t);
-            Agent updated = service.update(t);
-            AgentDto myDto = converter.toDto(updated);
-            res = new ResponseEntity<>(myDto, HttpStatus.OK);
-        }
-        return res;
-    }
+//    @Operation(summary = "Updates the specified  agent")
+//    @PutMapping("")
+//    public ResponseEntity<AgentDto> update(@RequestBody AgentDto dto) throws Exception {
+//        ResponseEntity<AgentDto> res ;
+//        if (dto.getId() == null || service.findById(dto.getId()) == null)
+//            res = new ResponseEntity<>(HttpStatus.CONFLICT);
+//        else {
+//            Agent t = service.findById(dto.getId());
+//            converter.copy(dto,t);
+//            Agent updated = service.update(t);
+//            AgentDto myDto = converter.toDto(updated);
+//            res = new ResponseEntity<>(myDto, HttpStatus.OK);
+//        }
+//        return res;
+//    }
 
-    @Operation(summary = "Delete list of agent")
-    @PostMapping("multiple")
-    public ResponseEntity<List<AgentDto>> delete(@RequestBody List<AgentDto> dtos) throws Exception {
-        ResponseEntity<List<AgentDto>> res ;
-        HttpStatus status = HttpStatus.CONFLICT;
-        if (dtos != null && !dtos.isEmpty()) {
-            converter.init(false);
-            List<Agent> ts = converter.toItem(dtos);
-            service.delete(ts);
-            status = HttpStatus.OK;
-        }
-        res = new ResponseEntity<>(dtos, status);
-        return res;
-    }
-    @Operation(summary = "Delete the specified agent")
-    @DeleteMapping("")
-    public ResponseEntity<AgentDto> delete(@RequestBody AgentDto dto) throws Exception {
-		ResponseEntity<AgentDto> res;
-        HttpStatus status = HttpStatus.CONFLICT;
-        if (dto != null) {
-            converter.init(false);
-            Agent t = converter.toItem(dto);
-            service.delete(Arrays.asList(t));
-            status = HttpStatus.OK;
-        }
-        res = new ResponseEntity<>(dto, status);
-        return res;
-    }
+//    @Operation(summary = "Delete list of agent")
+//    @PostMapping("multiple")
+//    public ResponseEntity<List<AgentDto>> delete(@RequestBody List<AgentDto> dtos) throws Exception {
+//        ResponseEntity<List<AgentDto>> res ;
+//        HttpStatus status = HttpStatus.CONFLICT;
+//        if (dtos != null && !dtos.isEmpty()) {
+//            converter.init(false);
+//            List<Agent> ts = converter.toItem(dtos);
+//            service.delete(ts);
+//            status = HttpStatus.OK;
+//        }
+//        res = new ResponseEntity<>(dtos, status);
+//        return res;
+//    }
+//    @Operation(summary = "Delete the specified agent")
+//    @DeleteMapping("")
+//    public ResponseEntity<AgentDto> delete(@RequestBody AgentDto dto) throws Exception {
+//		ResponseEntity<AgentDto> res;
+//        HttpStatus status = HttpStatus.CONFLICT;
+//        if (dto != null) {
+//            converter.init(false);
+//            Agent t = converter.toItem(dto);
+//            service.delete(Arrays.asList(t));
+//            status = HttpStatus.OK;
+//        }
+//        res = new ResponseEntity<>(dto, status);
+//        return res;
+//    }
 
-    @Operation(summary = "Delete the specified agent")
-    @DeleteMapping("id/{id}")
-    public ResponseEntity<Long> deleteById(@PathVariable Long id) throws Exception {
-        ResponseEntity<Long> res;
-        HttpStatus status = HttpStatus.PRECONDITION_FAILED;
-        if (id != null) {
-            boolean resultDelete = service.deleteById(id);
-            if (resultDelete) {
-                status = HttpStatus.OK;
-            }
-        }
-        res = new ResponseEntity<>(id, status);
-        return res;
-    }
-    @Operation(summary = "Delete multiple agents by ids")
-    @DeleteMapping("multiple/id")
-    public ResponseEntity<List<Long>> deleteByIdIn(@RequestBody List<Long> ids) throws Exception {
-        ResponseEntity<List<Long>> res;
-        HttpStatus status = HttpStatus.CONFLICT;
-        if (ids != null) {
-            service.deleteByIdIn(ids);
-            status = HttpStatus.OK;
-        }
-        res = new ResponseEntity<>(ids, status);
-        return res;
-     }
+//    @Operation(summary = "Delete the specified agent")
+//    @DeleteMapping("id/{id}")
+//    public ResponseEntity<Long> deleteById(@PathVariable Long id) throws Exception {
+//        ResponseEntity<Long> res;
+//        HttpStatus status = HttpStatus.PRECONDITION_FAILED;
+//        if (id != null) {
+//            boolean resultDelete = service.deleteById(id);
+//            if (resultDelete) {
+//                status = HttpStatus.OK;
+//            }
+//        }
+//        res = new ResponseEntity<>(id, status);
+//        return res;
+//    }
+//    @Operation(summary = "Delete multiple agents by ids")
+//    @DeleteMapping("multiple/id")
+//    public ResponseEntity<List<Long>> deleteByIdIn(@RequestBody List<Long> ids) throws Exception {
+//        ResponseEntity<List<Long>> res;
+//        HttpStatus status = HttpStatus.CONFLICT;
+//        if (ids != null) {
+//            service.deleteByIdIn(ids);
+//            status = HttpStatus.OK;
+//        }
+//        res = new ResponseEntity<>(ids, status);
+//        return res;
+//     }
 
 
-    @Operation(summary = "find by entiteAdministrative id")
-    @GetMapping("entiteAdministrative/id/{id}")
-    public List<AgentDto> findByEntiteAdministrativeId(@PathVariable Long id){
-        return findDtos(service.findByEntiteAdministrativeId(id));
-    }
-    @Operation(summary = "delete by entiteAdministrative id")
-    @DeleteMapping("entiteAdministrative/id/{id}")
-    public int deleteByEntiteAdministrativeId(@PathVariable Long id){
-        return service.deleteByEntiteAdministrativeId(id);
-    }
-    @Operation(summary = "find by plageHoraire id")
-    @GetMapping("plageHoraire/id/{id}")
-    public List<AgentDto> findByPlageHoraireId(@PathVariable Long id){
-        return findDtos(service.findByPlageHoraireId(id));
-    }
-    @Operation(summary = "delete by plageHoraire id")
-    @DeleteMapping("plageHoraire/id/{id}")
-    public int deleteByPlageHoraireId(@PathVariable Long id){
-        return service.deleteByPlageHoraireId(id);
-    }
+//    @Operation(summary = "find by entiteAdministrative id")
+//    @GetMapping("entiteAdministrative/id/{id}")
+//    public List<AgentDto> findByEntiteAdministrativeId(@PathVariable Long id){
+//        return findDtos(service.findByEntiteAdministrativeId(id));
+//    }
+//    @Operation(summary = "delete by entiteAdministrative id")
+//    @DeleteMapping("entiteAdministrative/id/{id}")
+//    public int deleteByEntiteAdministrativeId(@PathVariable Long id){
+//        return service.deleteByEntiteAdministrativeId(id);
+//    }
+//    @Operation(summary = "find by plageHoraire id")
+//    @GetMapping("plageHoraire/id/{id}")
+//    public List<AgentDto> findByPlageHoraireId(@PathVariable Long id){
+//        return findDtos(service.findByPlageHoraireId(id));
+//    }
+//    @Operation(summary = "delete by plageHoraire id")
+//    @DeleteMapping("plageHoraire/id/{id}")
+//    public int deleteByPlageHoraireId(@PathVariable Long id){
+//        return service.deleteByPlageHoraireId(id);
+//    }
 
     @Operation(summary = "Finds a agent and associated list by id")
     @GetMapping("detail/id/{id}")

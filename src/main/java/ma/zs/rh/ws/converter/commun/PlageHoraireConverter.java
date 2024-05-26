@@ -36,8 +36,11 @@ public class PlageHoraireConverter {
                 item.setRef(dto.getRef());
             if(StringUtil.isNotEmpty(dto.getTypeHoraire()))
                 item.setTypeHoraire(dto.getTypeHoraire());
+
             if(StringUtil.isNotEmpty(dto.getHeureDebut()))
                 item.setHeureDebut(DateUtil.stringEnToDate(dto.getHeureDebut()));
+            if(StringUtil.isNotEmpty(dto.getHeureFin()))
+                item.setHeureFin(DateUtil.stringEnToDate(dto.getHeureFin()));
 
 
 
@@ -57,8 +60,11 @@ public class PlageHoraireConverter {
                 dto.setRef(item.getRef());
             if(StringUtil.isNotEmpty(item.getTypeHoraire()))
                 dto.setTypeHoraire(item.getTypeHoraire());
+
             if(item.getHeureDebut()!=null)
                 dto.setHeureDebut(DateUtil.dateTimeToString(item.getHeureDebut()));
+            if(item.getHeureFin()!=null)
+                dto.setHeureFin(DateUtil.dateTimeToString(item.getHeureFin()));
 
 
         return dto;

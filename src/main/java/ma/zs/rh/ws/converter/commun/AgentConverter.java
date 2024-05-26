@@ -47,6 +47,14 @@ public class AgentConverter {
                 item.setId(dto.getId());
             if(StringUtil.isNotEmpty(dto.getRef()))
                 item.setRef(dto.getRef());
+            
+            
+            if(StringUtil.isNotEmpty(dto.getLastName()))
+                item.setLastName(dto.getLastName());
+            
+            if(StringUtil.isNotEmpty(dto.getFirstName()))
+                item.setFirstName(dto.getFirstName());
+            
             if(StringUtil.isNotEmpty(dto.getAdresse()))
                 item.setAdresse(dto.getAdresse());
             if(StringUtil.isNotEmpty(dto.getThm()))
@@ -89,6 +97,14 @@ public class AgentConverter {
                 dto.setId(item.getId());
             if(StringUtil.isNotEmpty(item.getRef()))
                 dto.setRef(item.getRef());
+            
+            
+            if(StringUtil.isNotEmpty(item.getLastName()))
+                dto.setLastName(item.getLastName());
+            
+            if(StringUtil.isNotEmpty(item.getFirstName()))
+                dto.setFirstName(item.getFirstName());
+            
             if(StringUtil.isNotEmpty(item.getAdresse()))
                 dto.setAdresse(item.getAdresse());
             if(StringUtil.isNotEmpty(item.getThm()))

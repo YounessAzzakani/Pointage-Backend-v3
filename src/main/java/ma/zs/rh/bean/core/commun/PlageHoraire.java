@@ -33,6 +33,7 @@ public class PlageHoraire  extends BaseEntity     {
     private String typeHoraire;
 
     private LocalDateTime heureDebut ;
+    private LocalDateTime heureFin ;
 
 
 
@@ -77,6 +78,12 @@ public class PlageHoraire  extends BaseEntity     {
     }
     public void setHeureDebut(LocalDateTime heureDebut){
         this.heureDebut = heureDebut;
+    }
+    public LocalDateTime getHeureFin() {
+        return heureFin;
+    }
+    public void setHeureFin(LocalDateTime heureFin) {
+        this.heureFin = heureFin;
     }
 
     @Transient
