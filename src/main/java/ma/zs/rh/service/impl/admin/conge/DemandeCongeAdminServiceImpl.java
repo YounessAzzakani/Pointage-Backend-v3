@@ -125,6 +125,11 @@ public class DemandeCongeAdminServiceImpl implements DemandeCongeAdminService {
         return ((Long) dao.count(mySpecification)).intValue();
     }
 
+    @Override
+    public long getTotalDemandeConge() {
+        return dao.count();
+    }
+
     public List<DemandeConge> findByMotifRejetDemandeCongeId(Long id){
         return dao.findByMotifRejetDemandeCongeId(id);
     }

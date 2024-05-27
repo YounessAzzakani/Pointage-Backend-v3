@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface DemandeAbsenceAdminService {
 
 
+    long getTotalDemandeAbsence();
 
     List<DemandeAbsence> findByMotifRejetDemandeAbsenceId(Long id);
     int deleteByMotifRejetDemandeAbsenceId(Long id);

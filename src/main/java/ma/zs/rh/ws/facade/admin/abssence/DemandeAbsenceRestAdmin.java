@@ -253,6 +253,10 @@ public class DemandeAbsenceRestAdmin {
 
 
 
+    @GetMapping("/total")
+    public long getTotalDemandeAbsence() {
+        return service.getTotalDemandeAbsence();
+    }
 
     @Autowired private DemandeAbsenceAdminService service;
     @Autowired private DemandeAbsenceConverter converter;

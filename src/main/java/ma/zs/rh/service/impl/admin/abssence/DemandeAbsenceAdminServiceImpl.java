@@ -125,6 +125,11 @@ public class DemandeAbsenceAdminServiceImpl implements DemandeAbsenceAdminServic
         return ((Long) dao.count(mySpecification)).intValue();
     }
 
+    @Override
+    public long getTotalDemandeAbsence() {
+        return dao.count();
+    }
+
     public List<DemandeAbsence> findByMotifRejetDemandeAbsenceId(Long id){
         return dao.findByMotifRejetDemandeAbsenceId(id);
     }

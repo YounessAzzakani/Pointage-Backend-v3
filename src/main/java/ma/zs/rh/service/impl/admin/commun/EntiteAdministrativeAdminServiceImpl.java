@@ -127,7 +127,13 @@ public class EntiteAdministrativeAdminServiceImpl implements EntiteAdministrativ
         return dao.countByChefServiceRef(ref);
     }
 
-	public boolean deleteById(Long id) {
+    @Override
+    public long getTotalEntites() {
+        return dao.count();
+    }
+
+
+    public boolean deleteById(Long id) {
         boolean condition = deleteByIdCheckCondition(id);
         if (condition) {
             dao.deleteById(id);

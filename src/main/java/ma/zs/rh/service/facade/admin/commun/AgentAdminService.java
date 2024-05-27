@@ -25,6 +25,9 @@ public interface AgentAdminService {
     long countByPlageHoraireRef(String ref);
 
 
+    long getTotalAgents();
+
+
 
 
 	Agent create(Agent t);
