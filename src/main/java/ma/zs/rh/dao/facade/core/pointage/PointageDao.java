@@ -20,4 +20,6 @@ public interface PointageDao extends AbstractRepository<Pointage,Long>  {
     @Query("SELECT NEW Pointage(item.id,item.ref) FROM Pointage item")
     List<Pointage> findAllOptimized();
 
+    // New method to find pointages by agent ID and order by datePointage
+    List<Pointage> findByAgentIdOrderByDatePointageAsc(Long agentId);
 }

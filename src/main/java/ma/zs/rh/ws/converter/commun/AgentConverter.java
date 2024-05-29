@@ -51,9 +51,7 @@ public class AgentConverter {
             
             if(StringUtil.isNotEmpty(dto.getLastName()))
                 item.setLastName(dto.getLastName());
-            
-            if(StringUtil.isNotEmpty(dto.getFirstName()))
-                item.setFirstName(dto.getFirstName());
+
             
             if(StringUtil.isNotEmpty(dto.getAdresse()))
                 item.setAdresse(dto.getAdresse());
@@ -101,9 +99,10 @@ public class AgentConverter {
             
             if(StringUtil.isNotEmpty(item.getLastName()))
                 dto.setLastName(item.getLastName());
-            
-            if(StringUtil.isNotEmpty(item.getFirstName()))
-                dto.setFirstName(item.getFirstName());
+
+//            if(StringUtil.isNotEmpty(item.getFirstName()))
+//                dto.setFirstName(item.getFirstName());
+
             
             if(StringUtil.isNotEmpty(item.getAdresse()))
                 dto.setAdresse(item.getAdresse());

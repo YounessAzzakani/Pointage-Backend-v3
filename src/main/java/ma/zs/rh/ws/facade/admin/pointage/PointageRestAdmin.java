@@ -39,6 +39,21 @@ import ma.zs.rh.zynerator.dto.FileTempDto;
 public class PointageRestAdmin {
 
 
+//    @GetMapping("/calculateWorkedHours/{agentId}")
+//    @Operation(summary = "Calculates the total worked hours for an agent by their ID")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Successfully calculated worked hours"),
+//            @ApiResponse(responseCode = "404", description = "Agent not found")
+//    })
+//    public ResponseEntity<Double> calculateWorkedHours(@PathVariable Long agentId) {
+//        try {
+//            double workedHours = service.calculateWorkedHours(agentId);
+//            return new ResponseEntity<>(workedHours, HttpStatus.OK);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+
 
 
     @Operation(summary = "Finds a list of all pointages")

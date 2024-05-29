@@ -18,6 +18,8 @@ public class UserCriteria extends  BaseCriteria  {
     private String passwordLike;
     private Boolean passwordChanged;
 
+    private String fullName;
+    private String fullNameLike;
     private String firstName;
     private String firstNameLike;
     private String lastName;
@@ -90,6 +92,20 @@ public class UserCriteria extends  BaseCriteria  {
     }
     public void setPasswordLike(String passwordLike){
         this.passwordLike = passwordLike;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getFullNameLike() {
+        return fullNameLike;
+    }
+    public void setFullNameLike(String fullNameLike) {
+        this.fullNameLike = fullNameLike;
     }
 
     public String getFirstName(){

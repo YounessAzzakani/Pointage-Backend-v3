@@ -12,6 +12,8 @@ public interface PointageAdminService {
 
 
 
+//    double calculateWorkedHours(Long agentId);
+
     List<Pointage> findByAgentId(Long id);
     int deleteByAgentId(Long id);
     long countByAgentRef(String ref);

@@ -31,6 +31,7 @@ public class User  extends BaseEntity  implements UserDetails {
     protected String password;
     protected boolean passwordChanged = false;
 
+    protected String fullName;
     protected String firstName;
     protected String lastName;
     protected String phone;
@@ -145,6 +146,14 @@ public class User  extends BaseEntity  implements UserDetails {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getFirstName() {
