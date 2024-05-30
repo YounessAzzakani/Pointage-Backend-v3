@@ -158,7 +158,14 @@ public class AgentAdminServiceImpl implements AgentAdminService {
         return dao.countByPlageHoraireRef(ref);
     }
 
-	public boolean deleteById(Long id) {
+
+
+    @Override
+    public long getTotalAgents() {
+        return dao.count();
+    }
+
+    public boolean deleteById(Long id) {
         boolean condition = deleteByIdCheckCondition(id);
         if (condition) {
             dao.deleteById(id);

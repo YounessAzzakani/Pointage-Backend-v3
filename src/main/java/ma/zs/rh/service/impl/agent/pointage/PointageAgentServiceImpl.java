@@ -10,12 +10,19 @@ import ma.zs.rh.service.facade.agent.pointage.PointageAgentService;
 import ma.zs.rh.zynerator.service.AbstractServiceImpl;
 import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
+
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.YearMonth;
 import java.util.List;
 import java.util.ArrayList;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import ma.zs.rh.zynerator.util.RefelexivityUtil;
 
@@ -31,6 +38,91 @@ import java.util.List;
 @Service
 public class PointageAgentServiceImpl implements PointageAgentService {
 
+
+    public Duration calculateWorkedHours(Agent agent, LocalDate date) {
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(
+                agent.getId(),
+                date.atStartOfDay(),
+                date.plusDays(1).atStartOfDay()
+        );
+
+        Duration workedHours = Duration.ZERO;
+
+        for (int i = 0; i < pointages.size(); i += 2) {
+            Pointage entrance = pointages.get(i);
+            Pointage exit = (i + 1 < pointages.size()) ? pointages.get(i + 1) : null;
+
+            if (exit != null && entrance.getPointageSens() == Pointage.PointageSens.ENTRANCE && exit.getPointageSens() == Pointage.PointageSens.EXIT) {
+                workedHours = workedHours.plus(Duration.between(entrance.getDatePointage(), exit.getDatePointage()));
+            }
+        }
+
+        return workedHours;
+    }
+    public Duration calculateWorkedHoursForMonth(Agent agent, YearMonth yearMonth) {
+        Duration totalWorkedHours = Duration.ZERO;
+
+        for (int day = 1; day <= yearMonth.lengthOfMonth(); day++) {
+            LocalDate date = yearMonth.atDay(day);
+            Duration workedHoursForDay = calculateWorkedHours(agent, date);
+            totalWorkedHours = totalWorkedHours.plus(workedHoursForDay);
+        }
+
+        return totalWorkedHours;
+    }
+
+    public boolean isAbsent(Agent agent, LocalDate date) {
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(
+                agent.getId(),
+                date.atStartOfDay(),
+                date.plusDays(1).atStartOfDay()
+        );
+
+        return pointages.isEmpty();
+    }
+
+    public boolean isRetard(Agent agent, LocalDate date, LocalTime expectedStartTime) {
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(
+                agent.getId(),
+                date.atStartOfDay(),
+                date.plusDays(1).atStartOfDay()
+        );
+
+        if (!pointages.isEmpty() && pointages.get(0).getPointageSens() == Pointage.PointageSens.ENTRANCE) {
+            return pointages.get(0).getDatePointage().toLocalTime().isAfter(expectedStartTime);
+        }
+
+        return false;
+    }
+
+
+    @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
+    public Pointage create(Pointage t) {
+        Pointage loaded = findByReferenceEntity(t);
+        Pointage saved;
+        if (loaded == null) {
+            // Get the last Pointage for the given Agent on the current day
+            List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageDesc(
+                    t.getAgent().getId(),
+                    LocalDate.now().atStartOfDay(),
+                    LocalDate.now().plusDays(1).atStartOfDay()
+            );
+
+
+            if (pointages.isEmpty() || pointages.get(0).getPointageSens() == Pointage.PointageSens.EXIT) {
+                // If there's no Pointage for the current day or the last Pointage was EXIT, then the next Pointage should be ENTRANCE
+                t.setPointageSens(Pointage.PointageSens.ENTRANCE);
+            } else {
+                // If the last Pointage was ENTRANCE, then the next Pointage should be EXIT
+                t.setPointageSens(Pointage.PointageSens.EXIT);
+            }
+
+            saved = dao.save(t);
+        } else {
+            saved = null;
+        }
+        return saved;
+    }
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public Pointage update(Pointage t) {
@@ -169,17 +261,7 @@ public class PointageAgentServiceImpl implements PointageAgentService {
 		return result;
     }
 
-    @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
-    public Pointage create(Pointage t) {
-        Pointage loaded = findByReferenceEntity(t);
-        Pointage saved;
-        if (loaded == null) {
-            saved = dao.save(t);
-        }else {
-            saved = null;
-        }
-        return saved;
-    }
+
 
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public List<Pointage> create(List<Pointage> ts) {

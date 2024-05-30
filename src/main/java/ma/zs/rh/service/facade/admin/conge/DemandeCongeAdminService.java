@@ -12,6 +12,8 @@ public interface DemandeCongeAdminService {
 
 
 
+    long getTotalDemandeConge();
+
     List<DemandeConge> findByMotifRejetDemandeCongeId(Long id);
     int deleteByMotifRejetDemandeCongeId(Long id);
     long countByMotifRejetDemandeCongeRef(String ref);

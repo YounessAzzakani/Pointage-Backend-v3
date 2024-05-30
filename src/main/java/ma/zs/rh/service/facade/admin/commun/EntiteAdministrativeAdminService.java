@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.admin.commun;
 import java.util.List;
 import ma.zs.rh.bean.core.commun.EntiteAdministrative;
 import ma.zs.rh.dao.criteria.core.commun.EntiteAdministrativeCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;
@@ -17,7 +16,7 @@ public interface EntiteAdministrativeAdminService {
     long countByChefServiceRef(String ref);
 
 
-
+    long getTotalEntites();
 
 	EntiteAdministrative create(EntiteAdministrative t);
 

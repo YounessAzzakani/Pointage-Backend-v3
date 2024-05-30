@@ -15,8 +15,8 @@ import java.math.BigDecimal;
 public class AgentDto  extends AuditBaseDto {
 
     private String ref  ;
+//    private String firstName ;
     private String lastName ;
-    private String firstName ;
     private String adresse  ;
     private BigDecimal thm  ;
     private BigDecimal salaire  ;
@@ -155,18 +155,10 @@ public class AgentDto  extends AuditBaseDto {
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 
     public Collection<Role> getRoles() {
         return roles;

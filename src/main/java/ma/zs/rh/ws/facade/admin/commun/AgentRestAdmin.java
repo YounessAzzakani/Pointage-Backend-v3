@@ -270,6 +270,12 @@ public class AgentRestAdmin {
         return service.changePassword(dto.getUsername(),dto.getPassword());
     }
 
+
+    @GetMapping("/total")
+    public long getTotalAgents() {
+        return service.getTotalAgents();
+    }
+
     @Autowired private AgentAdminService service;
     @Autowired private AgentConverter converter;
 

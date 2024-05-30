@@ -34,6 +34,8 @@ public class JwtUtils {
         String jwt = JWT.create()
                 .withSubject(userPrincipal.getUsername())
                 .withClaim("email", userPrincipal.getEmail())
+
+                .withClaim("fullName", userPrincipal.getFirstName())
                 .withClaim("firstName", userPrincipal.getFirstName())
                 .withClaim("lastName", userPrincipal.getLastName())
                 .withClaim("phone", userPrincipal.getPhone())

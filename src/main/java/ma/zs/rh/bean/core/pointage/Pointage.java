@@ -5,44 +5,40 @@ import java.util.Objects;
 import java.time.LocalDateTime;
 
 
-import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ma.zs.rh.bean.core.commun.Agent;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import ma.zs.rh.zynerator.bean.BaseEntity;
 import jakarta.persistence.*;
-import java.util.Objects;
 
 @Entity
+@Data @NoArgsConstructor @AllArgsConstructor
 @Table(name = "pointage")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @SequenceGenerator(name="pointage_seq",sequenceName="pointage_seq",allocationSize=1, initialValue = 1)
 public class Pointage  extends BaseEntity     {
 
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="pointage_seq")
     private Long id;
-
-
 
     @Column(length = 500)
     private String ref;
 
     private LocalDateTime datePointage ;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @Enumerated(EnumType.STRING)
     private PointageSens pointageSens;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Pointeuse pointeuse;
 
+    @ManyToOne
+    @JoinColumn(name = "agent")
     private Agent agent ;
 
-
-    public Pointage(){
-        super();
-    }
 
     public Pointage(Long id,String ref){
         this.id = id;
@@ -55,49 +51,8 @@ public class Pointage  extends BaseEntity     {
 
 
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="pointage_seq")
-    public Long getId(){
-        return this.id;
-    }
-    public void setId(Long id){
-        this.id = id;
-    }
-    public String getRef(){
-        return this.ref;
-    }
-    public void setRef(String ref){
-        this.ref = ref;
-    }
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "agent")
-    public Agent getAgent(){
-        return this.agent;
-    }
-    public void setAgent(Agent agent){
-        this.agent = agent;
-    }
-    public LocalDateTime getDatePointage(){
-        return this.datePointage;
-    }
-    public void setDatePointage(LocalDateTime datePointage){
-        this.datePointage = datePointage;
-    }
-    @ManyToOne(fetch = FetchType.LAZY)
-    public PointageSens getPointageSens(){
-        return this.pointageSens;
-    }
-    public void setPointageSens(PointageSens pointageSens){
-        this.pointageSens = pointageSens;
-    }
-    @ManyToOne(fetch = FetchType.LAZY)
-    public Pointeuse getPointeuse(){
-        return this.pointeuse;
-    }
-    public void setPointeuse(Pointeuse pointeuse){
-        this.pointeuse = pointeuse;
-    }
+
+
 
     @Transient
     public String getLabel() {
@@ -118,5 +73,12 @@ public class Pointage  extends BaseEntity     {
         return Objects.hash(id);
     }
 
+
+
+
+    public enum PointageSens {
+        ENTRANCE,
+        EXIT
+    }
 }
 

@@ -20,6 +20,7 @@ public class UserDto  extends AuditBaseDto {
     private String password  ;
     private Boolean passwordChanged  ;
 
+    protected String fullName;
     protected String firstName;
     protected String lastName;
     protected String phone;
@@ -129,4 +130,10 @@ public class UserDto  extends AuditBaseDto {
         this.phone = phone;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 }

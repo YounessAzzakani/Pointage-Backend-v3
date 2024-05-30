@@ -15,12 +15,6 @@ public class PointageCriteria extends  BaseCriteria  {
     private LocalDateTime datePointage;
     private LocalDateTime datePointageFrom;
     private LocalDateTime datePointageTo;
-    private String pointageSens;
-    private String pointageSensMin;
-    private String pointageSensMax;
-    private String pointeuse;
-    private String pointeuseMin;
-    private String pointeuseMax;
 
     private AgentCriteria agent ;
     private List<AgentCriteria> agents ;
@@ -59,44 +53,6 @@ public class PointageCriteria extends  BaseCriteria  {
     public void setDatePointageTo(LocalDateTime datePointageTo){
         this.datePointageTo = datePointageTo;
     }
-    public String getPointageSens(){
-        return this.pointageSens;
-    }
-    public void setPointageSens(String pointageSens){
-        this.pointageSens = pointageSens;
-    }   
-    public String getPointageSensMin(){
-        return this.pointageSensMin;
-    }
-    public void setPointageSensMin(String pointageSensMin){
-        this.pointageSensMin = pointageSensMin;
-    }
-    public String getPointageSensMax(){
-        return this.pointageSensMax;
-    }
-    public void setPointageSensMax(String pointageSensMax){
-        this.pointageSensMax = pointageSensMax;
-    }
-      
-    public String getPointeuse(){
-        return this.pointeuse;
-    }
-    public void setPointeuse(String pointeuse){
-        this.pointeuse = pointeuse;
-    }   
-    public String getPointeuseMin(){
-        return this.pointeuseMin;
-    }
-    public void setPointeuseMin(String pointeuseMin){
-        this.pointeuseMin = pointeuseMin;
-    }
-    public String getPointeuseMax(){
-        return this.pointeuseMax;
-    }
-    public void setPointeuseMax(String pointeuseMax){
-        this.pointeuseMax = pointeuseMax;
-    }
-      
 
     public AgentCriteria getAgent(){
         return this.agent;

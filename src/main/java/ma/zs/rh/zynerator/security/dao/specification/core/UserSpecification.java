@@ -16,7 +16,8 @@ public class UserSpecification extends  AbstractSpecification<UserCriteria, User
         addPredicateBool("accountNonExpired", criteria.getAccountNonExpired());
         addPredicateBool("accountNonLocked", criteria.getAccountNonLocked());
         addPredicate("username", criteria.getUsername(),criteria.getUsernameLike());
-        addPredicate("firstNme", criteria.getFirstName(),criteria.getFirstNameLike());
+        addPredicate("fullName", criteria.getFullName(),criteria.getFullNameLike());
+        addPredicate("firstName", criteria.getFirstName(),criteria.getFirstNameLike());
         addPredicate("lastName", criteria.getLastName(),criteria.getLastNameLike());
         addPredicate("phone", criteria.getPhone(),criteria.getPhoneLike());
         addPredicate("password", criteria.getPassword(),criteria.getPasswordLike());

@@ -261,8 +261,10 @@ public class DemandeCongeRestAdmin {
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
-
-
+    @GetMapping("/total")
+    public long getTotalDemandeConge() {
+        return service.getTotalDemandeConge();
+    }
 
     @Autowired private DemandeCongeAdminService service;
     @Autowired private DemandeCongeConverter converter;

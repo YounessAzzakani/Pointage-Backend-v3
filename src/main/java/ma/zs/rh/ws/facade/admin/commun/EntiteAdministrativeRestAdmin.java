@@ -241,8 +241,10 @@ public class EntiteAdministrativeRestAdmin {
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
-
-
+    @GetMapping("/total")
+    public long getTotalEntites() {
+        return service.getTotalEntites();
+    }
 
     @Autowired private EntiteAdministrativeAdminService service;
     @Autowired private EntiteAdministrativeConverter converter;
