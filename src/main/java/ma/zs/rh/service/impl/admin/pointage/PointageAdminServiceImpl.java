@@ -11,7 +11,7 @@ import ma.zs.rh.zynerator.service.AbstractServiceImpl;
 import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
 
-import java.time.Duration;
+import java.time.*;
 import java.util.List;
 import java.util.ArrayList;
 import org.springframework.data.domain.PageRequest;
@@ -33,30 +33,84 @@ import java.util.List;
 @Service
 public class PointageAdminServiceImpl implements PointageAdminService {
 
+    public Duration calculateWorkedHours(Agent agent, LocalDate date) {
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(
+                agent.getId(),
+                date.atStartOfDay(),
+                date.plusDays(1).atStartOfDay()
+        );
 
-//    @Override
-//    public double calculateWorkedHours(Long agentId) {
-//        List<Pointage> pointages = dao.findByAgentIdOrderByDatePointageAsc(agentId);
-//
-//        if (pointages.isEmpty()) {
-//            return 0;
-//        }
-//
-//        double totalWorkedHours = 0;
-//        Pointage entree = null;
-//
-//        for (Pointage pointage : pointages) {
-//            if ("entree".equals(pointage.getPointageSens().getLibelle())) {
-//                entree = pointage;
-//            } else if ("sortie".equals(pointage.getPointageSens().getLibelle()) && entree != null) {
-//                Duration duration = Duration.between(entree.getDatePointage(), pointage.getDatePointage());
-//                totalWorkedHours += duration.toMinutes() / 60.0;
-//                entree = null; // Reset entree after finding the corresponding sortie
-//            }
-//        }
-//
-//        return totalWorkedHours;
-//    }
+        Duration workedHours = Duration.ZERO;
+
+        for (int i = 0; i < pointages.size(); i += 2) {
+            Pointage entrance = pointages.get(i);
+            Pointage exit = (i + 1 < pointages.size()) ? pointages.get(i + 1) : null;
+
+            if (exit != null && entrance.getPointageSens() == Pointage.PointageSens.ENTRANCE && exit.getPointageSens() == Pointage.PointageSens.EXIT) {
+                workedHours = workedHours.plus(Duration.between(entrance.getDatePointage(), exit.getDatePointage()));
+            }
+        }
+
+        return workedHours;
+    }
+    public Duration calculateWorkedHoursForMonth(Agent agent, YearMonth yearMonth) {
+        Duration totalWorkedHours = Duration.ZERO;
+
+        for (int day = 1; day <= yearMonth.lengthOfMonth(); day++) {
+            LocalDate date = yearMonth.atDay(day);
+            Duration workedHoursForDay = calculateWorkedHours(agent, date);
+            totalWorkedHours = totalWorkedHours.plus(workedHoursForDay);
+        }
+
+        return totalWorkedHours;
+    }
+
+    public boolean isAbsent(Agent agent, LocalDate date) {
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(
+                agent.getId(),
+                date.atStartOfDay(),
+                date.plusDays(1).atStartOfDay()
+        );
+
+        return pointages.isEmpty();
+    }
+
+    public boolean isRetard(Agent agent, LocalDate date, LocalTime expectedStartTime) {
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(
+                agent.getId(),
+                date.atStartOfDay(),
+                date.plusDays(1).atStartOfDay()
+        );
+
+        if (!pointages.isEmpty() && pointages.get(0).getPointageSens() == Pointage.PointageSens.ENTRANCE) {
+            return pointages.get(0).getDatePointage().toLocalTime().isAfter(expectedStartTime);
+        }
+
+        return false;
+    }
+
+    public Pointage createPointage(Agent agent) {
+        Pointage pointage = new Pointage();
+        pointage.setAgent(agent);
+        pointage.setDatePointage(LocalDateTime.now());
+
+        // Get the last Pointage for the given Agent on the current day
+        List<Pointage> pointages = dao.findByAgentIdAndDatePointageBetweenOrderByDatePointageDesc(
+                agent.getId(),
+                LocalDate.now().atStartOfDay(),
+                LocalDate.now().plusDays(1).atStartOfDay()
+        );
+
+        if (pointages.isEmpty() || pointages.get(0).getPointageSens() == Pointage.PointageSens.EXIT) {
+            // If there's no Pointage for the current day or the last Pointage was EXIT, then the next Pointage should be ENTRANCE
+            pointage.setPointageSens(Pointage.PointageSens.ENTRANCE);
+        } else {
+            // If the last Pointage was ENTRANCE, then the next Pointage should be EXIT
+            pointage.setPointageSens(Pointage.PointageSens.EXIT);
+        }
+
+        return dao.save(pointage);
+    }
 
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)

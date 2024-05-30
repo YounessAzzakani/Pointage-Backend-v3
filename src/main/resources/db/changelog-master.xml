@@ -10,7 +10,6 @@
         <include file="classpath:db/migration/changelog/conge/MotifRejetDemandeConge.xml"/>
         <include file="classpath:db/migration/changelog/abssence/DemandeAbsence.xml"/>
         <include file="classpath:db/migration/changelog/docadmin/EtatDemandeDocumentAdministratif.xml"/>
-        <include file="classpath:db/migration/changelog/pointage/Pointeuse.xml"/>
         <include file="classpath:db/migration/changelog/commun/PaiementAgent.xml"/>
         <include file="classpath:db/migration/changelog/retard/JustificationRetard.xml"/>
         <include file="classpath:db/migration/changelog/commun/PlageHoraire.xml"/>
@@ -24,7 +23,6 @@
         <include file="classpath:db/migration/changelog/retard/Retard.xml"/>
         <include file="classpath:db/migration/changelog/conge/EtatDemandeConge.xml"/>
         <include file="classpath:db/migration/changelog/docadmin/TypeDocumentAdministratif.xml"/>
-        <include file="classpath:db/migration/changelog/pointage/PointageSens.xml"/>
         <include file="classpath:db/migration/changelog/conge/RaisonConge.xml"/>
         <include file="classpath:db/migration/changelog/abssence/EtatDemandeAbsence.xml"/>
         <include file="classpath:db/migration/changelog/heuresupp/EtatTypeHeureSupplementaire.xml"/>

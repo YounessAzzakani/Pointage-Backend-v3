@@ -41,10 +41,7 @@ public class PointageConverter {
                 item.setRef(dto.getRef());
             if(StringUtil.isNotEmpty(dto.getDatePointage()))
                 item.setDatePointage(DateUtil.stringEnToDate(dto.getDatePointage()));
-            if (dto.getPointageSens() != null)
-                item.setPointageSens(dto.getPointageSens());
-            if (dto.getPointeuse() != null)
-                item.setPointeuse(dto.getPointeuse());
+
             if(this.agent && dto.getAgent()!=null)
                 item.setAgent(agentConverter.toItem(dto.getAgent())) ;
 
@@ -67,10 +64,7 @@ public class PointageConverter {
                 dto.setRef(item.getRef());
             if(item.getDatePointage()!=null)
                 dto.setDatePointage(DateUtil.dateTimeToString(item.getDatePointage()));
-            if (item.getPointageSens() != null)
-                dto.setPointageSens(item.getPointageSens());
-            if (item.getPointeuse() != null)
-                dto.setPointeuse(item.getPointeuse());
+
             if(this.agent && item.getAgent()!=null) {
                 dto.setAgent(agentConverter.toDto(item.getAgent())) ;
 
@@ -113,8 +107,9 @@ public class PointageConverter {
 
     public void copy(PointageDto dto, Pointage t) {
 		BeanUtils.copyProperties(dto, t, AbstractConverterHelper.getNullPropertyNames(dto));
-        if (dto.getAgent() != null)
-        agentConverter.copy(dto.getAgent(), t.getAgent());
+        if (dto.getAgent() != null) {
+            agentConverter.copy(dto.getAgent(), t.getAgent());
+        }
     }
 
     public List<Pointage> copy(List<PointageDto> dtos) {

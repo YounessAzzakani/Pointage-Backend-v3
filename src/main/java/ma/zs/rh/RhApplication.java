@@ -156,7 +156,6 @@ public class RhApplication {
         modelPermissions.add(new ModelPermission("MotifRejetDemandeConge"));
         modelPermissions.add(new ModelPermission("DemandeAbsence"));
         modelPermissions.add(new ModelPermission("EtatDemandeDocumentAdministratif"));
-        modelPermissions.add(new ModelPermission("Pointeuse"));
         modelPermissions.add(new ModelPermission("PaiementAgent"));
         modelPermissions.add(new ModelPermission("JustificationRetard"));
         modelPermissions.add(new ModelPermission("PlageHoraire"));
@@ -170,7 +169,6 @@ public class RhApplication {
         modelPermissions.add(new ModelPermission("Retard"));
         modelPermissions.add(new ModelPermission("EtatDemandeConge"));
         modelPermissions.add(new ModelPermission("TypeDocumentAdministratif"));
-        modelPermissions.add(new ModelPermission("PointageSens"));
         modelPermissions.add(new ModelPermission("RaisonConge"));
         modelPermissions.add(new ModelPermission("EtatDemandeAbsence"));
         modelPermissions.add(new ModelPermission("EtatTypeHeureSupplementaire"));

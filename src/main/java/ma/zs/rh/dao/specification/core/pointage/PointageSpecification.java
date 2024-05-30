@@ -12,8 +12,6 @@ public class PointageSpecification extends  AbstractSpecification<PointageCriter
         addPredicateId("id", criteria);
         addPredicate("ref", criteria.getRef(),criteria.getRefLike());
         addPredicate("datePointage", criteria.getDatePointage(), criteria.getDatePointageFrom(), criteria.getDatePointageTo());
-        addPredicateInt("pointageSens", criteria.getPointageSens(), criteria.getPointageSensMin(), criteria.getPointageSensMax());
-        addPredicateInt("pointeuse", criteria.getPointeuse(), criteria.getPointeuseMin(), criteria.getPointeuseMax());
         addPredicateFk("agent","id", criteria.getAgent()==null?null:criteria.getAgent().getId());
         addPredicateFk("agent","id", criteria.getAgents());
         addPredicateFk("agent","ref", criteria.getAgent()==null?null:criteria.getAgent().getRef());

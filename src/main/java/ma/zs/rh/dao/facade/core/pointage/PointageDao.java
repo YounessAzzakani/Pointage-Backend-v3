@@ -5,6 +5,8 @@ import ma.zs.rh.zynerator.repository.AbstractRepository;
 import ma.zs.rh.bean.core.pointage.Pointage;
 import org.springframework.stereotype.Repository;
 import ma.zs.rh.bean.core.pointage.Pointage;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -22,4 +24,8 @@ public interface PointageDao extends AbstractRepository<Pointage,Long>  {
 
     // New method to find pointages by agent ID and order by datePointage
     List<Pointage> findByAgentIdOrderByDatePointageAsc(Long agentId);
+
+    List<Pointage> findByAgentIdAndDatePointageBetweenOrderByDatePointageDesc(Long id, LocalDateTime localDateTime, LocalDateTime localDateTime1);
+
+    List<Pointage> findByAgentIdAndDatePointageBetweenOrderByDatePointageAsc(Long id, LocalDateTime localDateTime, LocalDateTime localDateTime1);
 }
