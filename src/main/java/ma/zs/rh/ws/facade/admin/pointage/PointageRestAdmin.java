@@ -1,6 +1,8 @@
 package  ma.zs.rh.ws.facade.admin.pointage;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -25,20 +27,20 @@ import java.util.List;
 public class PointageRestAdmin {
 
 
-//    @GetMapping("/calculateWorkedHours/{agentId}")
-//    @Operation(summary = "Calculates the total worked hours for an agent by their ID")
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Successfully calculated worked hours"),
-//            @ApiResponse(responseCode = "404", description = "Agent not found")
-//    })
-//    public ResponseEntity<Double> calculateWorkedHours(@PathVariable Long agentId) {
-//        try {
-//            double workedHours = service.calculateWorkedHours(agentId);
-//            return new ResponseEntity<>(workedHours, HttpStatus.OK);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
+    @GetMapping("/calculateWorkedHours/{agentId}")
+    @Operation(summary = "Calculates the total worked hours for an agent by their ID")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successfully calculated worked hours"),
+            @ApiResponse(responseCode = "404", description = "Agent not found")
+    })
+    public ResponseEntity<Double> calculateWorkedHours(@PathVariable Long agentId) {
+        try {
+            double workedHours = service.calculateWorkedHours(agentId);
+            return new ResponseEntity<>(workedHours, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
 
 

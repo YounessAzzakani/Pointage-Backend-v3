@@ -22,6 +22,8 @@ public interface PointageAdminService {
 
 	Pointage create(Pointage t);
 
+    double calculateWorkedHours(Long agentId);
+
     Pointage update(Pointage t);
 
     List<Pointage> update(List<Pointage> ts,boolean createIfNotExist);

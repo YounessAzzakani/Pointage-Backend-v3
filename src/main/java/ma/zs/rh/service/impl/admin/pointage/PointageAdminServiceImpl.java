@@ -9,6 +9,7 @@ import ma.zs.rh.dao.specification.core.pointage.PointageSpecification;
 import ma.zs.rh.service.facade.admin.pointage.PointageAdminService;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.ArrayList;
 import org.springframework.data.domain.PageRequest;
@@ -29,29 +30,29 @@ import ma.zs.rh.service.facade.admin.commun.AgentAdminService ;
 public class PointageAdminServiceImpl implements PointageAdminService {
 
 
-//    @Override
-//    public double calculateWorkedHours(Long agentId) {
-//        List<Pointage> pointages = dao.findByAgentIdOrderByDatePointageAsc(agentId);
-//
-//        if (pointages.isEmpty()) {
-//            return 0;
-//        }
-//
-//        double totalWorkedHours = 0;
-//        Pointage entree = null;
-//
-//        for (Pointage pointage : pointages) {
-//            if ("entree".equals(pointage.getPointageSens().getLibelle())) {
-//                entree = pointage;
-//            } else if ("sortie".equals(pointage.getPointageSens().getLibelle()) && entree != null) {
-//                Duration duration = Duration.between(entree.getDatePointage(), pointage.getDatePointage());
-//                totalWorkedHours += duration.toMinutes() / 60.0;
-//                entree = null; // Reset entree after finding the corresponding sortie
-//            }
-//        }
-//
-//        return totalWorkedHours;
-//    }
+    @Override
+    public double calculateWorkedHours(Long agentId) {
+        List<Pointage> pointages = dao.findByAgentIdOrderByDatePointageAsc(agentId);
+
+        if (pointages.isEmpty()) {
+            return 0;
+        }
+
+        double totalWorkedHours = 0;
+        Pointage entree = null;
+
+        for (Pointage pointage : pointages) {
+            if ("entree".equals(pointage.getPointageSens().getLibelle())) {
+                entree = pointage;
+            } else if ("sortie".equals(pointage.getPointageSens().getLibelle()) && entree != null) {
+                Duration duration = Duration.between(entree.getDatePointage(), pointage.getDatePointage());
+                totalWorkedHours += duration.toMinutes() / 60.0;
+                entree = null; // Reset entree after finding the corresponding sortie
+            }
+        }
+
+        return totalWorkedHours;
+    }
 
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
