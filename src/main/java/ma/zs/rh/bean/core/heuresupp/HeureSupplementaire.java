@@ -11,9 +11,9 @@ import ma.zs.rh.bean.core.commun.EntiteAdministrative;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import ma.zs.rh.zynerator.bean.BaseEntity;
+import ma.zs.rh.zbiblio.bean.BaseEntity;
 import jakarta.persistence.*;
-import java.util.Objects;
+
 import java.math.BigDecimal;
 
 @Entity

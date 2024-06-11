@@ -1,10 +1,10 @@
 package ma.zs.rh.dao.facade.core.abssence;
 
 import org.springframework.data.jpa.repository.Query;
-import ma.zs.rh.zynerator.repository.AbstractRepository;
+import ma.zs.rh.zbiblio.repository.AbstractRepository;
 import ma.zs.rh.bean.core.abssence.DemandeAbsence;
 import org.springframework.stereotype.Repository;
-import ma.zs.rh.bean.core.abssence.DemandeAbsence;
+
 import java.util.List;
 
 
@@ -12,6 +12,9 @@ import java.util.List;
 public interface DemandeAbsenceDao extends AbstractRepository<DemandeAbsence,Long>  {
     DemandeAbsence findByRef(String ref);
     int deleteByRef(String ref);
+
+    List<DemandeAbsence> findByAgentRef(String ref);
+
 
     List<DemandeAbsence> findByMotifRejetDemandeAbsenceId(Long id);
     int deleteByMotifRejetDemandeAbsenceId(Long id);

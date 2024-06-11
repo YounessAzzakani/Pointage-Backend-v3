@@ -1,7 +1,7 @@
 package  ma.zs.rh.ws.dto.docadmin;
 
-import ma.zs.rh.zynerator.audit.Log;
-import ma.zs.rh.zynerator.dto.AuditBaseDto;
+import ma.zs.rh.zbiblio.audit.Log;
+import ma.zs.rh.zbiblio.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 

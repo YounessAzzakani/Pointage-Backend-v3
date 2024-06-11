@@ -1,10 +1,10 @@
 package ma.zs.rh.dao.facade.core.abssence;
 
 import org.springframework.data.jpa.repository.Query;
-import ma.zs.rh.zynerator.repository.AbstractRepository;
+import ma.zs.rh.zbiblio.repository.AbstractRepository;
 import ma.zs.rh.bean.core.abssence.EtatDemandeAbsence;
 import org.springframework.stereotype.Repository;
-import ma.zs.rh.bean.core.abssence.EtatDemandeAbsence;
+
 import java.util.List;
 
 

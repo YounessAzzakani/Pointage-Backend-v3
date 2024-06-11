@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.abssence;
 
 import ma.zs.rh.dao.criteria.core.abssence.DemandeAbsenceCriteria;
 import ma.zs.rh.bean.core.abssence.DemandeAbsence;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class DemandeAbsenceSpecification extends  AbstractSpecification<DemandeAbsenceCriteria, DemandeAbsence>  {

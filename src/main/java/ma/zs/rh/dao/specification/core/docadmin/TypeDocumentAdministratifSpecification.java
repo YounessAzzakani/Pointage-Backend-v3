@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.docadmin;
 
 import ma.zs.rh.dao.criteria.core.docadmin.TypeDocumentAdministratifCriteria;
 import ma.zs.rh.bean.core.docadmin.TypeDocumentAdministratif;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class TypeDocumentAdministratifSpecification extends  AbstractSpecification<TypeDocumentAdministratifCriteria, TypeDocumentAdministratif>  {

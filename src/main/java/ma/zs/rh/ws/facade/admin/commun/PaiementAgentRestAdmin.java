@@ -1,38 +1,24 @@
 package  ma.zs.rh.ws.facade.admin.commun;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
 import java.util.Arrays;
-import java.util.ArrayList;
 
 import ma.zs.rh.bean.core.commun.PaiementAgent;
 import ma.zs.rh.dao.criteria.core.commun.PaiementAgentCriteria;
 import ma.zs.rh.service.facade.admin.commun.PaiementAgentAdminService;
 import ma.zs.rh.ws.converter.commun.PaiementAgentConverter;
 import ma.zs.rh.ws.dto.commun.PaiementAgentDto;
-import ma.zs.rh.zynerator.controller.AbstractController;
-import ma.zs.rh.zynerator.dto.AuditEntityDto;
-import ma.zs.rh.zynerator.util.PaginatedList;
+import ma.zs.rh.zbiblio.util.PaginatedList;
 
 
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import ma.zs.rh.zynerator.process.Result;
-
-
-import org.springframework.web.multipart.MultipartFile;
-import ma.zs.rh.zynerator.dto.FileTempDto;
 
 @RestController
 @RequestMapping("/api/admin/paiementAgent/")

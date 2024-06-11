@@ -1,14 +1,12 @@
 package ma.zs.rh.service.impl.agent.heuresupp;
 
 
-import ma.zs.rh.zynerator.exception.EntityNotFoundException;
+import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.heuresupp.HeureSupplementaire;
 import ma.zs.rh.dao.criteria.core.heuresupp.HeureSupplementaireCriteria;
 import ma.zs.rh.dao.facade.core.heuresupp.HeureSupplementaireDao;
 import ma.zs.rh.dao.specification.core.heuresupp.HeureSupplementaireSpecification;
 import ma.zs.rh.service.facade.agent.heuresupp.HeureSupplementaireAgentService;
-import ma.zs.rh.zynerator.service.AbstractServiceImpl;
-import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
 
-import ma.zs.rh.zynerator.util.RefelexivityUtil;
+import ma.zs.rh.zbiblio.util.RefelexivityUtil;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +23,10 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import ma.zs.rh.service.facade.agent.commun.AgentAgentService ;
-import ma.zs.rh.bean.core.commun.Agent ;
 import ma.zs.rh.service.facade.agent.commun.EntiteAdministrativeAgentService ;
-import ma.zs.rh.bean.core.commun.EntiteAdministrative ;
 import ma.zs.rh.service.facade.agent.heuresupp.EtatTypeHeureSupplementaireAgentService ;
-import ma.zs.rh.bean.core.heuresupp.EtatTypeHeureSupplementaire ;
 import ma.zs.rh.service.facade.agent.heuresupp.TypeHeureSupplementaireAgentService ;
-import ma.zs.rh.bean.core.heuresupp.TypeHeureSupplementaire ;
 
-import java.util.List;
 @Service
 public class HeureSupplementaireAgentServiceImpl implements HeureSupplementaireAgentService {
 

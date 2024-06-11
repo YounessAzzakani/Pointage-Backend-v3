@@ -5,16 +5,9 @@ import java.util.Objects;
 import java.time.LocalDateTime;
 
 
-import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-
-
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-import ma.zs.rh.zynerator.bean.BaseEntity;
+import ma.zs.rh.zbiblio.bean.BaseEntity;
 import jakarta.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "plage_horaire")

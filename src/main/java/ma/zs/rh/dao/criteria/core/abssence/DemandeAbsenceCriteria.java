@@ -4,10 +4,9 @@ package  ma.zs.rh.dao.criteria.core.abssence;
 import ma.zs.rh.dao.criteria.core.commun.AgentCriteria;
 import ma.zs.rh.dao.criteria.core.commun.EntiteAdministrativeCriteria;
 
-import ma.zs.rh.zynerator.criteria.BaseCriteria;
+import ma.zs.rh.zbiblio.criteria.BaseCriteria;
 import java.util.List;
 import java.time.LocalDateTime;
-import java.time.LocalDate;
 
 public class DemandeAbsenceCriteria extends  BaseCriteria  {
 

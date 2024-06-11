@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.retard;
 
 import ma.zs.rh.dao.criteria.core.retard.EtatRetardCriteria;
 import ma.zs.rh.bean.core.retard.EtatRetard;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class EtatRetardSpecification extends  AbstractSpecification<EtatRetardCriteria, EtatRetard>  {

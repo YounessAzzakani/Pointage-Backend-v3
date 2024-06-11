@@ -2,13 +2,10 @@ package  ma.zs.rh.ws.dto.pointage;
 
 import ma.zs.rh.bean.core.pointage.PointageSens;
 import ma.zs.rh.bean.core.pointage.Pointeuse;
-import ma.zs.rh.zynerator.audit.Log;
-import ma.zs.rh.zynerator.dto.AuditBaseDto;
+import ma.zs.rh.zbiblio.audit.Log;
+import ma.zs.rh.zbiblio.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import java.util.Date;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 

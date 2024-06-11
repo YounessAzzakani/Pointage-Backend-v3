@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.abssence;
 
 import ma.zs.rh.dao.criteria.core.abssence.RaisonAbsenceCriteria;
 import ma.zs.rh.bean.core.abssence.RaisonAbsence;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class RaisonAbsenceSpecification extends  AbstractSpecification<RaisonAbsenceCriteria, RaisonAbsence>  {

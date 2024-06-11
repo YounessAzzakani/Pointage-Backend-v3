@@ -1,14 +1,12 @@
 package ma.zs.rh.service.impl.agent.docadmin;
 
 
-import ma.zs.rh.zynerator.exception.EntityNotFoundException;
+import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.docadmin.TypeDocumentAdministratif;
 import ma.zs.rh.dao.criteria.core.docadmin.TypeDocumentAdministratifCriteria;
 import ma.zs.rh.dao.facade.core.docadmin.TypeDocumentAdministratifDao;
 import ma.zs.rh.dao.specification.core.docadmin.TypeDocumentAdministratifSpecification;
 import ma.zs.rh.service.facade.agent.docadmin.TypeDocumentAdministratifAgentService;
-import ma.zs.rh.zynerator.service.AbstractServiceImpl;
-import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
@@ -17,15 +15,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
 
-import ma.zs.rh.zynerator.util.RefelexivityUtil;
+import ma.zs.rh.zbiblio.util.RefelexivityUtil;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import java.util.List;
 @Service
 public class TypeDocumentAdministratifAgentServiceImpl implements TypeDocumentAdministratifAgentService {
 

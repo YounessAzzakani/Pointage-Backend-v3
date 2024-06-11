@@ -1,14 +1,12 @@
 package ma.zs.rh.service.impl.agent.commun;
 
 
-import ma.zs.rh.zynerator.exception.EntityNotFoundException;
+import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.commun.Agent;
 import ma.zs.rh.dao.criteria.core.commun.AgentCriteria;
 import ma.zs.rh.dao.facade.core.commun.AgentDao;
 import ma.zs.rh.dao.specification.core.commun.AgentSpecification;
 import ma.zs.rh.service.facade.agent.commun.AgentAgentService;
-import ma.zs.rh.zynerator.service.AbstractServiceImpl;
-import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
 
-import ma.zs.rh.zynerator.util.RefelexivityUtil;
+import ma.zs.rh.zbiblio.util.RefelexivityUtil;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,22 +23,18 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import ma.zs.rh.service.facade.agent.commun.PlageHoraireAgentService ;
-import ma.zs.rh.bean.core.commun.PlageHoraire ;
 import ma.zs.rh.service.facade.agent.commun.EntiteAdministrativeAgentService ;
-import ma.zs.rh.bean.core.commun.EntiteAdministrative ;
 import ma.zs.rh.service.facade.agent.commun.PosteAgentService ;
-import ma.zs.rh.bean.core.commun.Poste ;
 
 import java.time.LocalDateTime;
-import ma.zs.rh.zynerator.security.service.facade.UserService;
-import ma.zs.rh.zynerator.security.service.facade.RoleService;
-import ma.zs.rh.zynerator.security.service.facade.RoleUserService;
-import ma.zs.rh.zynerator.security.bean.Role;
-import ma.zs.rh.zynerator.security.bean.RoleUser;
-import ma.zs.rh.zynerator.security.common.AuthoritiesConstants;
-import ma.zs.rh.zynerator.security.service.facade.ModelPermissionUserService;
-import java.util.Collection;
-import java.util.List;
+import ma.zs.rh.zbiblio.security.service.facade.UserService;
+import ma.zs.rh.zbiblio.security.service.facade.RoleService;
+import ma.zs.rh.zbiblio.security.service.facade.RoleUserService;
+import ma.zs.rh.zbiblio.security.bean.Role;
+import ma.zs.rh.zbiblio.security.bean.RoleUser;
+import ma.zs.rh.zbiblio.security.common.AuthoritiesConstants;
+import ma.zs.rh.zbiblio.security.service.facade.ModelPermissionUserService;
+
 @Service
 public class AgentAgentServiceImpl implements AgentAgentService {
 

@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.admin.commun;
 import java.util.List;
 import ma.zs.rh.bean.core.commun.Agent;
 import ma.zs.rh.dao.criteria.core.commun.AgentCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

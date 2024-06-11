@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.agent.docadmin;
 import java.util.List;
 import ma.zs.rh.bean.core.docadmin.EtatDemandeDocumentAdministratif;
 import ma.zs.rh.dao.criteria.core.docadmin.EtatDemandeDocumentAdministratifCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

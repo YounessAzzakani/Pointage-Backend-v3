@@ -3,10 +3,9 @@ package  ma.zs.rh.dao.criteria.core.retard;
 
 import ma.zs.rh.dao.criteria.core.commun.AgentCriteria;
 
-import ma.zs.rh.zynerator.criteria.BaseCriteria;
+import ma.zs.rh.zbiblio.criteria.BaseCriteria;
 import java.util.List;
 import java.time.LocalDateTime;
-import java.time.LocalDate;
 
 public class RetardCriteria extends  BaseCriteria  {
 

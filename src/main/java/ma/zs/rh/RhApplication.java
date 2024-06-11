@@ -11,7 +11,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import java.math.BigDecimal;
@@ -21,13 +20,13 @@ import java.util.List;
 
 import ma.zs.rh.bean.core.commun.Agent;
 import ma.zs.rh.service.facade.admin.commun.AgentAdminService;
-import ma.zs.rh.zynerator.security.bean.*;
-import ma.zs.rh.zynerator.security.common.AuthoritiesConstants;
-import ma.zs.rh.zynerator.security.service.facade.*;
+import ma.zs.rh.zbiblio.security.bean.*;
+import ma.zs.rh.zbiblio.security.common.AuthoritiesConstants;
+import ma.zs.rh.zbiblio.security.service.facade.*;
 
 
-import ma.zs.rh.zynerator.security.bean.User;
-import ma.zs.rh.zynerator.security.bean.Role;
+import ma.zs.rh.zbiblio.security.bean.User;
+import ma.zs.rh.zbiblio.security.bean.Role;
 
 @SpringBootApplication
 //@EnableFeignClients

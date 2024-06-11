@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.commun;
 
 import ma.zs.rh.dao.criteria.core.commun.PosteCriteria;
 import ma.zs.rh.bean.core.commun.Poste;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class PosteSpecification extends  AbstractSpecification<PosteCriteria, Poste>  {

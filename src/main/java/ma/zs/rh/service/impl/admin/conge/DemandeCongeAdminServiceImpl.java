@@ -1,14 +1,12 @@
 package ma.zs.rh.service.impl.admin.conge;
 
 
-import ma.zs.rh.zynerator.exception.EntityNotFoundException;
+import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.conge.DemandeConge;
 import ma.zs.rh.dao.criteria.core.conge.DemandeCongeCriteria;
 import ma.zs.rh.dao.facade.core.conge.DemandeCongeDao;
 import ma.zs.rh.dao.specification.core.conge.DemandeCongeSpecification;
 import ma.zs.rh.service.facade.admin.conge.DemandeCongeAdminService;
-import ma.zs.rh.zynerator.service.AbstractServiceImpl;
-import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
 
-import ma.zs.rh.zynerator.util.RefelexivityUtil;
+import ma.zs.rh.zbiblio.util.RefelexivityUtil;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,17 +23,11 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import ma.zs.rh.service.facade.admin.commun.AgentAdminService ;
-import ma.zs.rh.bean.core.commun.Agent ;
 import ma.zs.rh.service.facade.admin.conge.MotifRejetDemandeCongeAdminService ;
-import ma.zs.rh.bean.core.conge.MotifRejetDemandeConge ;
 import ma.zs.rh.service.facade.admin.conge.EtatDemandeCongeAdminService ;
-import ma.zs.rh.bean.core.conge.EtatDemandeConge ;
 import ma.zs.rh.service.facade.admin.commun.EntiteAdministrativeAdminService ;
-import ma.zs.rh.bean.core.commun.EntiteAdministrative ;
 import ma.zs.rh.service.facade.admin.conge.RaisonCongeAdminService ;
-import ma.zs.rh.bean.core.conge.RaisonConge ;
 
-import java.util.List;
 @Service
 public class DemandeCongeAdminServiceImpl implements DemandeCongeAdminService {
 

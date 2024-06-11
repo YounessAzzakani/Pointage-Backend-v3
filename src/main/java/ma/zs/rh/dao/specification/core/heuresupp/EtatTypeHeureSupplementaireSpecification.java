@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.heuresupp;
 
 import ma.zs.rh.dao.criteria.core.heuresupp.EtatTypeHeureSupplementaireCriteria;
 import ma.zs.rh.bean.core.heuresupp.EtatTypeHeureSupplementaire;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class EtatTypeHeureSupplementaireSpecification extends  AbstractSpecification<EtatTypeHeureSupplementaireCriteria, EtatTypeHeureSupplementaire>  {

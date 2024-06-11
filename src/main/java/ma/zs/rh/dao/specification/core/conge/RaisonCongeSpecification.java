@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.conge;
 
 import ma.zs.rh.dao.criteria.core.conge.RaisonCongeCriteria;
 import ma.zs.rh.bean.core.conge.RaisonConge;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class RaisonCongeSpecification extends  AbstractSpecification<RaisonCongeCriteria, RaisonConge>  {

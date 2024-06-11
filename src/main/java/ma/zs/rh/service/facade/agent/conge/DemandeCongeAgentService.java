@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.agent.conge;
 import java.util.List;
 import ma.zs.rh.bean.core.conge.DemandeConge;
 import ma.zs.rh.dao.criteria.core.conge.DemandeCongeCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

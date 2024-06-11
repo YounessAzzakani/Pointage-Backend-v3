@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.agent.retard;
 import java.util.List;
 import ma.zs.rh.bean.core.retard.Retard;
 import ma.zs.rh.dao.criteria.core.retard.RetardCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

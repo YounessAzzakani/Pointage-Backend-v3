@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.pointage;
 
 import ma.zs.rh.dao.criteria.core.pointage.PointageSensCriteria;
 import ma.zs.rh.bean.core.pointage.PointageSens;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class PointageSensSpecification extends  AbstractSpecification<PointageSensCriteria, PointageSens>  {

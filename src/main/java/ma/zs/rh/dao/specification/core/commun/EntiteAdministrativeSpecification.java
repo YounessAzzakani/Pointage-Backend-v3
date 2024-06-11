@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.commun;
 
 import ma.zs.rh.dao.criteria.core.commun.EntiteAdministrativeCriteria;
 import ma.zs.rh.bean.core.commun.EntiteAdministrative;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class EntiteAdministrativeSpecification extends  AbstractSpecification<EntiteAdministrativeCriteria, EntiteAdministrative>  {

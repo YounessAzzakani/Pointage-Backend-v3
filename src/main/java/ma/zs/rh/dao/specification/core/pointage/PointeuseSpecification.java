@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.pointage;
 
 import ma.zs.rh.dao.criteria.core.pointage.PointeuseCriteria;
 import ma.zs.rh.bean.core.pointage.Pointeuse;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class PointeuseSpecification extends  AbstractSpecification<PointeuseCriteria, Pointeuse>  {

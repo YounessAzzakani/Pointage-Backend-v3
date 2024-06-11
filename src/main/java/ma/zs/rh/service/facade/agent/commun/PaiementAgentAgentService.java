@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.agent.commun;
 import java.util.List;
 import ma.zs.rh.bean.core.commun.PaiementAgent;
 import ma.zs.rh.dao.criteria.core.commun.PaiementAgentCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

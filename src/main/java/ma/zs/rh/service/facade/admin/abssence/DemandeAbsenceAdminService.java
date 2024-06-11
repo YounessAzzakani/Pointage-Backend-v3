@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.admin.abssence;
 import java.util.List;
 import ma.zs.rh.bean.core.abssence.DemandeAbsence;
 import ma.zs.rh.dao.criteria.core.abssence.DemandeAbsenceCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

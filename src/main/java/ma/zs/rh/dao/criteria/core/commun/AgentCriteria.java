@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.criteria.core.commun;
 
 
 
-import ma.zs.rh.zynerator.criteria.BaseCriteria;
+import ma.zs.rh.zbiblio.criteria.BaseCriteria;
 import java.util.List;
 
 public class AgentCriteria extends  BaseCriteria  {

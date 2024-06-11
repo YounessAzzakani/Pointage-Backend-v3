@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.heuresupp;
 
 import ma.zs.rh.dao.criteria.core.heuresupp.HeureSupplementaireCriteria;
 import ma.zs.rh.bean.core.heuresupp.HeureSupplementaire;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class HeureSupplementaireSpecification extends  AbstractSpecification<HeureSupplementaireCriteria, HeureSupplementaire>  {

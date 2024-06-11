@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.commun;
 
 import ma.zs.rh.dao.criteria.core.commun.PaiementAgentCriteria;
 import ma.zs.rh.bean.core.commun.PaiementAgent;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class PaiementAgentSpecification extends  AbstractSpecification<PaiementAgentCriteria, PaiementAgent>  {

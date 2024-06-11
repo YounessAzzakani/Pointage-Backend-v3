@@ -2,8 +2,7 @@ package  ma.zs.rh.dao.criteria.core.pointage;
 
 
 
-import ma.zs.rh.zynerator.criteria.BaseCriteria;
-import java.util.List;
+import ma.zs.rh.zbiblio.criteria.BaseCriteria;
 
 public class PointeuseCriteria extends  BaseCriteria  {
 

@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.conge;
 
 import ma.zs.rh.dao.criteria.core.conge.MotifRejetDemandeCongeCriteria;
 import ma.zs.rh.bean.core.conge.MotifRejetDemandeConge;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class MotifRejetDemandeCongeSpecification extends  AbstractSpecification<MotifRejetDemandeCongeCriteria, MotifRejetDemandeConge>  {

@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.admin.retard;
 import java.util.List;
 import ma.zs.rh.bean.core.retard.JustificationRetard;
 import ma.zs.rh.dao.criteria.core.retard.JustificationRetardCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

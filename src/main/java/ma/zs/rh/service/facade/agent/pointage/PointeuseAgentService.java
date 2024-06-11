@@ -3,7 +3,6 @@ package ma.zs.rh.service.facade.agent.pointage;
 import java.util.List;
 import ma.zs.rh.bean.core.pointage.Pointeuse;
 import ma.zs.rh.dao.criteria.core.pointage.PointeuseCriteria;
-import ma.zs.rh.zynerator.service.IService;
 
 
 import org.springframework.web.multipart.MultipartFile;

@@ -1,10 +1,10 @@
 package ma.zs.rh.dao.facade.core.docadmin;
 
 import org.springframework.data.jpa.repository.Query;
-import ma.zs.rh.zynerator.repository.AbstractRepository;
+import ma.zs.rh.zbiblio.repository.AbstractRepository;
 import ma.zs.rh.bean.core.docadmin.TypeDocumentAdministratif;
 import org.springframework.stereotype.Repository;
-import ma.zs.rh.bean.core.docadmin.TypeDocumentAdministratif;
+
 import java.util.List;
 
 

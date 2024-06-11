@@ -1,10 +1,10 @@
 package  ma.zs.rh.ws.dto.commun;
 
-import ma.zs.rh.zynerator.audit.Log;
-import ma.zs.rh.zynerator.dto.AuditBaseDto;
+import ma.zs.rh.zbiblio.audit.Log;
+import ma.zs.rh.zbiblio.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import ma.zs.rh.zynerator.security.bean.Role;
+import ma.zs.rh.zbiblio.security.bean.Role;
 import java.util.Collection;
 import java.math.BigDecimal;
 

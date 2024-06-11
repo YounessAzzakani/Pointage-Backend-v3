@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.commun;
 
 import ma.zs.rh.dao.criteria.core.commun.AgentCriteria;
 import ma.zs.rh.bean.core.commun.Agent;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class AgentSpecification extends  AbstractSpecification<AgentCriteria, Agent>  {

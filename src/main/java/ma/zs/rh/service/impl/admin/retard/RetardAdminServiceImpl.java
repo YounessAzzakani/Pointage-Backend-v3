@@ -1,14 +1,12 @@
 package ma.zs.rh.service.impl.admin.retard;
 
 
-import ma.zs.rh.zynerator.exception.EntityNotFoundException;
+import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.retard.Retard;
 import ma.zs.rh.dao.criteria.core.retard.RetardCriteria;
 import ma.zs.rh.dao.facade.core.retard.RetardDao;
 import ma.zs.rh.dao.specification.core.retard.RetardSpecification;
 import ma.zs.rh.service.facade.admin.retard.RetardAdminService;
-import ma.zs.rh.zynerator.service.AbstractServiceImpl;
-import ma.zs.rh.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
 
-import ma.zs.rh.zynerator.util.RefelexivityUtil;
+import ma.zs.rh.zbiblio.util.RefelexivityUtil;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +23,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import ma.zs.rh.service.facade.admin.commun.AgentAdminService ;
-import ma.zs.rh.bean.core.commun.Agent ;
 import ma.zs.rh.service.facade.admin.retard.EtatRetardAdminService ;
-import ma.zs.rh.bean.core.retard.EtatRetard ;
 import ma.zs.rh.service.facade.admin.retard.JustificationRetardAdminService ;
-import ma.zs.rh.bean.core.retard.JustificationRetard ;
 
-import java.util.List;
 @Service
 public class RetardAdminServiceImpl implements RetardAdminService {
 

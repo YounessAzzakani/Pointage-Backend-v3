@@ -3,22 +3,17 @@ package  ma.zs.rh.ws.converter.abssence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.BeanUtils;
-import ma.zs.rh.zynerator.converter.AbstractConverterHelper;
+import ma.zs.rh.zbiblio.converter.AbstractConverterHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ma.zs.rh.ws.converter.commun.AgentConverter;
-import ma.zs.rh.ws.converter.abssence.RaisonAbsenceConverter;
-import ma.zs.rh.ws.converter.abssence.EtatDemandeAbsenceConverter;
 import ma.zs.rh.ws.converter.commun.EntiteAdministrativeConverter;
-import ma.zs.rh.ws.converter.abssence.MotifRejetDemandeAbsenceConverter;
 
 
-
-import ma.zs.rh.zynerator.util.StringUtil;
-import ma.zs.rh.zynerator.converter.AbstractConverter;
-import ma.zs.rh.zynerator.util.DateUtil;
+import ma.zs.rh.zbiblio.util.StringUtil;
+import ma.zs.rh.zbiblio.util.DateUtil;
 import ma.zs.rh.bean.core.abssence.DemandeAbsence;
 import ma.zs.rh.ws.dto.abssence.DemandeAbsenceDto;
 

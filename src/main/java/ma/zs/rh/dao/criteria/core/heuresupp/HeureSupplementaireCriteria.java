@@ -4,7 +4,7 @@ package  ma.zs.rh.dao.criteria.core.heuresupp;
 import ma.zs.rh.dao.criteria.core.commun.AgentCriteria;
 import ma.zs.rh.dao.criteria.core.commun.EntiteAdministrativeCriteria;
 
-import ma.zs.rh.zynerator.criteria.BaseCriteria;
+import ma.zs.rh.zbiblio.criteria.BaseCriteria;
 import java.util.List;
 
 public class HeureSupplementaireCriteria extends  BaseCriteria  {

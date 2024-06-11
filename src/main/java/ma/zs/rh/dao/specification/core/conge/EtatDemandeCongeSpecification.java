@@ -2,7 +2,7 @@ package  ma.zs.rh.dao.specification.core.conge;
 
 import ma.zs.rh.dao.criteria.core.conge.EtatDemandeCongeCriteria;
 import ma.zs.rh.bean.core.conge.EtatDemandeConge;
-import ma.zs.rh.zynerator.specification.AbstractSpecification;
+import ma.zs.rh.zbiblio.specification.AbstractSpecification;
 
 
 public class EtatDemandeCongeSpecification extends  AbstractSpecification<EtatDemandeCongeCriteria, EtatDemandeConge>  {
