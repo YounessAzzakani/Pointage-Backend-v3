@@ -10,6 +10,8 @@ import org.springframework.web.multipart.MultipartFile;
 public interface DemandeAbsenceAgentService {
 
 
+    List<DemandeAbsence> findByOwner();
+
     List<DemandeAbsence> findByAgentRef(String ref);
 
 

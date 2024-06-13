@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface HeureSupplementaireAgentService {
 
 
+    List<HeureSupplementaire> findByOwner();
 
     List<HeureSupplementaire> findByTypeHeureSupplementaireId(Long id);
     int deleteByTypeHeureSupplementaireId(Long id);

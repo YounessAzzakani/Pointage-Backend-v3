@@ -1,191 +1,237 @@
-2024-06-11 01:27:03,754 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 13344 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
-2024-06-11 01:27:03,777 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
-2024-06-11 01:27:07,837 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-11 01:27:09,461 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 1597 ms. Found 31 JPA repository interfaces.
-2024-06-11 01:27:11,625 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
-2024-06-11 01:27:11,654 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2024-06-11 01:27:11,656 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
-2024-06-11 01:27:11,889 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2024-06-11 01:27:11,890 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7983 ms
-2024-06-11 01:27:12,555 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-11 01:27:12,678 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
-2024-06-11 01:27:12,685 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
-2024-06-11 01:27:13,020 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 01:27:13,351 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-11 01:27:13,381 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2024-06-11 01:27:13,701 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5709e10b
-2024-06-11 01:27:13,706 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-06-11 01:27:13,811 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-06-11 01:27:14,496 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 01:27:17,038 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-06-11 01:27:17,093 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59fa5a39] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2024-06-11 01:27:18,031 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 01:27:18,601 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-06-11 01:27:23,564 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-11 01:27:24,591 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
-2024-06-11 01:27:24,711 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@698df5e8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32317a37, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c12e25d, org.springframework.security.web.header.HeaderWriterFilter@475cb91b, org.springframework.security.web.authentication.logout.LogoutFilter@462b3fc7, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@8872669, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@240c170a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e077a32, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1727d525, org.springframework.security.web.session.SessionManagementFilter@74ed1b3d, org.springframework.security.web.access.ExceptionTranslationFilter@247e1f35, org.springframework.security.web.access.intercept.AuthorizationFilter@220f2d1b]
-2024-06-11 01:27:25,805 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
-2024-06-11 01:27:25,821 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 23.869 seconds (process running for 25.708)
-2024-06-11 01:28:22,620 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8036-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-11 01:28:22,623 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8036-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-06-11 01:28:22,630 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8036-exec-1] Completed initialization in 7 ms
-2024-06-11 02:10:41,371 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 02:10:41,371 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-11 02:10:41,387 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-11 16:18:28,246 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 2056 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
-2024-06-11 16:18:28,246 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
-2024-06-11 16:18:37,456 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-11 16:18:39,109 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 1618 ms. Found 31 JPA repository interfaces.
-2024-06-11 16:18:42,380 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
-2024-06-11 16:18:42,423 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2024-06-11 16:18:42,425 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
-2024-06-11 16:18:43,060 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2024-06-11 16:18:43,060 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 14663 ms
-2024-06-11 16:18:44,402 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-11 16:18:44,716 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
-2024-06-11 16:18:44,726 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
-2024-06-11 16:18:45,537 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 16:18:46,045 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-11 16:18:46,097 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2024-06-11 16:18:46,646 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6338afe2
-2024-06-11 16:18:46,646 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-06-11 16:18:46,879 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-06-11 16:18:47,996 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 16:18:50,897 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-06-11 16:18:50,979 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@65d3e2ba] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2024-06-11 16:18:52,215 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 16:18:52,858 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-06-11 16:18:57,690 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-11 16:18:59,429 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
-2024-06-11 16:18:59,560 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c47135c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3faadc24, org.springframework.security.web.context.SecurityContextPersistenceFilter@22a7d2f2, org.springframework.security.web.header.HeaderWriterFilter@79e0f00b, org.springframework.security.web.authentication.logout.LogoutFilter@519f1a7d, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@106c4a72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45a33515, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7effa21e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6acec4a1, org.springframework.security.web.session.SessionManagementFilter@f11fe28, org.springframework.security.web.access.ExceptionTranslationFilter@4f0e6be, org.springframework.security.web.access.intercept.AuthorizationFilter@735c0454]
-2024-06-11 16:19:01,470 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
-2024-06-11 16:19:01,496 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 35.957 seconds (process running for 38.904)
-2024-06-11 16:19:03,052 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(3)-192.168.1.4] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-11 16:19:03,054 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.1.4] Initializing Servlet 'dispatcherServlet'
-2024-06-11 16:19:03,059 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.1.4] Completed initialization in 5 ms
-2024-06-11 17:21:06,007 INFO org.apache.catalina.core.StandardService [SpringApplicationShutdownHook] Stopping service [Tomcat]
-2024-06-11 17:21:06,221 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 17:21:06,264 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-11 17:21:06,283 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-11 17:21:12,918 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 27708 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
-2024-06-11 17:21:12,921 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
-2024-06-11 17:21:15,565 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-11 17:21:15,919 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 341 ms. Found 31 JPA repository interfaces.
-2024-06-11 17:21:16,729 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
-2024-06-11 17:21:16,870 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3883 ms
-2024-06-11 17:21:17,230 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-11 17:21:17,309 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
-2024-06-11 17:21:17,313 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
-2024-06-11 17:21:17,516 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 17:21:17,675 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-11 17:21:17,697 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2024-06-11 17:21:17,911 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f19d423
-2024-06-11 17:21:17,913 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-06-11 17:21:17,984 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-06-11 17:21:18,438 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 17:28:21,100 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 17384 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
-2024-06-11 17:28:21,103 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
-2024-06-11 17:28:23,350 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-11 17:28:23,686 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 324 ms. Found 31 JPA repository interfaces.
-2024-06-11 17:28:24,675 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
-2024-06-11 17:28:24,688 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2024-06-11 17:28:24,688 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
-2024-06-11 17:28:24,830 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2024-06-11 17:28:24,830 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3677 ms
-2024-06-11 17:28:25,243 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-11 17:28:25,343 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
-2024-06-11 17:28:25,348 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
-2024-06-11 17:28:25,583 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 17:28:25,757 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-11 17:28:25,783 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2024-06-11 17:28:25,995 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@718ad3a6
-2024-06-11 17:28:25,998 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-06-11 17:28:26,078 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-06-11 17:28:26,543 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 17:28:28,078 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-06-11 17:28:28,112 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6179af64] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2024-06-11 17:28:28,748 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 17:28:29,224 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-06-11 17:28:34,345 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-11 17:28:35,909 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
-2024-06-11 17:28:36,136 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c63146c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b2235a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@47ce44ab, org.springframework.security.web.header.HeaderWriterFilter@7c4b5d13, org.springframework.security.web.authentication.logout.LogoutFilter@30eb427c, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@222557fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@441eae0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26562718, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5af6378e, org.springframework.security.web.session.SessionManagementFilter@65bd41d8, org.springframework.security.web.access.ExceptionTranslationFilter@7effa21e, org.springframework.security.web.access.intercept.AuthorizationFilter@3662309d]
-2024-06-11 17:28:37,743 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
-2024-06-11 17:28:37,767 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 17.246 seconds (process running for 18.353)
-2024-06-11 17:28:39,246 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(5)-192.168.1.4] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-11 17:28:39,246 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(5)-192.168.1.4] Initializing Servlet 'dispatcherServlet'
-2024-06-11 17:28:39,253 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(5)-192.168.1.4] Completed initialization in 7 ms
-2024-06-11 18:40:43,965 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m46s724ms398µs).
-2024-06-11 18:54:03,342 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 18:54:03,355 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-11 18:54:03,363 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-11 18:54:09,056 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 5596 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
-2024-06-11 18:54:09,058 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
-2024-06-11 18:54:11,035 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-11 18:54:11,356 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 314 ms. Found 31 JPA repository interfaces.
-2024-06-11 18:54:12,230 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
-2024-06-11 18:54:12,248 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2024-06-11 18:54:12,249 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
-2024-06-11 18:54:12,417 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2024-06-11 18:54:12,418 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3309 ms
-2024-06-11 18:54:12,841 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-11 18:54:12,948 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
-2024-06-11 18:54:12,952 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
-2024-06-11 18:54:13,165 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 18:54:13,350 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-11 18:54:13,374 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2024-06-11 18:54:13,563 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d02ff64
-2024-06-11 18:54:13,565 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-06-11 18:54:13,634 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-06-11 18:54:14,059 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 18:54:15,406 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-06-11 18:54:15,443 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@11548363] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2024-06-11 18:54:15,966 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 18:54:16,358 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-06-11 18:54:19,851 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-11 18:54:20,441 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
-2024-06-11 18:54:20,514 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24a26847, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30eb427c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7effa21e, org.springframework.security.web.header.HeaderWriterFilter@2313c291, org.springframework.security.web.authentication.logout.LogoutFilter@7f85482c, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@106c4a72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c4b5d13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@201cc412, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59c9e3b9, org.springframework.security.web.session.SessionManagementFilter@22a7d2f2, org.springframework.security.web.access.ExceptionTranslationFilter@5623354e, org.springframework.security.web.access.intercept.AuthorizationFilter@2c47135c]
-2024-06-11 18:54:21,169 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
-2024-06-11 18:54:21,184 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 12.683 seconds (process running for 13.804)
-2024-06-11 18:54:22,371 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(2)-192.168.0.126] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-11 18:54:22,372 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.0.126] Initializing Servlet 'dispatcherServlet'
-2024-06-11 18:54:22,378 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.0.126] Completed initialization in 6 ms
-2024-06-11 18:55:32,199 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 18:55:32,259 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-11 18:55:32,290 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-11 18:55:37,823 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 23168 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
-2024-06-11 18:55:37,824 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
-2024-06-11 18:55:39,606 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-11 18:55:39,921 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 305 ms. Found 31 JPA repository interfaces.
-2024-06-11 18:55:40,707 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
-2024-06-11 18:55:40,718 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2024-06-11 18:55:40,718 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
-2024-06-11 18:55:40,839 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2024-06-11 18:55:40,840 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2959 ms
-2024-06-11 18:55:41,174 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-11 18:55:41,236 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
-2024-06-11 18:55:41,239 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
-2024-06-11 18:55:41,416 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 18:55:41,558 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-11 18:55:41,576 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2024-06-11 18:55:41,772 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53079ae6
-2024-06-11 18:55:41,775 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2024-06-11 18:55:41,833 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-06-11 18:55:42,279 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
-2024-06-11 18:55:43,540 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-06-11 18:55:43,569 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@cfe881a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2024-06-11 18:55:44,083 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 18:55:44,476 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-06-11 18:55:47,878 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-11 18:55:48,486 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
-2024-06-11 18:55:48,567 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@eba003e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@659b0c20, org.springframework.security.web.context.SecurityContextPersistenceFilter@48d1f239, org.springframework.security.web.header.HeaderWriterFilter@3fdb9c55, org.springframework.security.web.authentication.logout.LogoutFilter@e39df43, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@1cfa5e46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ef7e510, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b89bf47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c696163, org.springframework.security.web.session.SessionManagementFilter@441eae0b, org.springframework.security.web.access.ExceptionTranslationFilter@5fa49615, org.springframework.security.web.access.intercept.AuthorizationFilter@5af6378e]
-2024-06-11 18:55:49,237 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
-2024-06-11 18:55:49,251 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 11.99 seconds (process running for 12.941)
-2024-06-11 18:55:50,084 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(2)-192.168.0.126] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-11 18:55:50,085 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.0.126] Initializing Servlet 'dispatcherServlet'
-2024-06-11 18:55:50,091 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.0.126] Completed initialization in 6 ms
-2024-06-11 19:02:43,478 WARN org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder [http-nio-8036-exec-10] Encoded password does not look like BCrypt
-2024-06-11 19:02:43,484 ERROR ma.zs.rh.zbiblio.security.jwt.AuthEntryPointJwt [http-nio-8036-exec-10] Unauthorized error: Bad credentials
-2024-06-11 19:24:19,128 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m36s881ms486µs500ns).
-2024-06-11 20:04:15,766 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-11 20:04:15,766 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-11 20:04:15,782 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 13:23:07,156 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 8296 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 13:23:07,166 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 13:23:16,980 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 13:23:18,429 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 1415 ms. Found 31 JPA repository interfaces.
+2024-06-13 13:23:20,188 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 13:23:20,206 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 13:23:20,206 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 13:23:20,390 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 13:23:20,391 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 13123 ms
+2024-06-13 13:23:20,911 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 13:23:21,073 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 13:23:21,078 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 13:23:21,456 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 13:23:21,716 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 13:23:21,749 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 13:23:22,115 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36ecf9f6
+2024-06-13 13:23:22,119 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 13:23:22,245 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 13:23:22,856 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 13:23:25,998 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 13:23:26,056 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3f89d36c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 13:23:27,242 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 13:23:27,965 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 13:23:32,200 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 13:23:33,364 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 13:23:33,492 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@475cb91b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1069baea, org.springframework.security.web.context.SecurityContextPersistenceFilter@76145ef9, org.springframework.security.web.header.HeaderWriterFilter@620bfd8c, org.springframework.security.web.authentication.logout.LogoutFilter@616f1c2e, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@3fd7f545, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@519f1a7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b0af511, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44ba9865, org.springframework.security.web.session.SessionManagementFilter@6ef7e510, org.springframework.security.web.access.ExceptionTranslationFilter@12008a54, org.springframework.security.web.access.intercept.AuthorizationFilter@1c696163]
+2024-06-13 13:23:35,236 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 13:23:35,269 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 30.771 seconds (process running for 33.396)
+2024-06-13 13:23:37,822 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(5)-192.168.1.4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 13:23:37,827 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(5)-192.168.1.4] Initializing Servlet 'dispatcherServlet'
+2024-06-13 13:23:37,837 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(5)-192.168.1.4] Completed initialization in 5 ms
+2024-06-13 13:44:53,968 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 13:44:53,983 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-13 13:44:54,024 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 13:45:04,220 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 2128 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 13:45:04,225 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 13:45:06,951 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 13:45:07,392 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 427 ms. Found 31 JPA repository interfaces.
+2024-06-13 13:45:08,420 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 13:45:08,434 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 13:45:08,434 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 13:45:08,610 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 13:45:08,610 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4300 ms
+2024-06-13 13:45:09,086 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 13:45:09,200 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 13:45:09,203 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 13:45:09,441 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 13:45:09,663 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 13:45:09,696 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 13:45:09,968 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28cf179c
+2024-06-13 13:45:09,969 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 13:45:10,100 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 13:45:10,697 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 13:45:12,518 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 13:45:12,561 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2fb9695a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 13:45:13,272 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 13:45:13,801 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 13:45:18,428 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 13:45:19,693 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 13:45:19,912 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@462b3fc7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7959747d, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a1b4074, org.springframework.security.web.header.HeaderWriterFilter@616f1c2e, org.springframework.security.web.authentication.logout.LogoutFilter@5b0ddbcf, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@d200d3e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1069baea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44ba9865, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19a920d1, org.springframework.security.web.session.SessionManagementFilter@659b0c20, org.springframework.security.web.access.ExceptionTranslationFilter@450555ac, org.springframework.security.web.access.intercept.AuthorizationFilter@6b7a96e1]
+2024-06-13 13:45:21,101 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 13:45:21,118 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 17.823 seconds (process running for 19.607)
+2024-06-13 13:48:47,811 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8036-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 13:48:47,812 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8036-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-13 13:48:47,814 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8036-exec-1] Completed initialization in 2 ms
+2024-06-13 13:51:29,527 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 13:51:29,536 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-13 13:51:29,569 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 13:51:33,180 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 14164 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 13:51:33,183 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 13:51:35,505 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 13:51:35,915 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 402 ms. Found 31 JPA repository interfaces.
+2024-06-13 13:51:36,889 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 13:51:36,906 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 13:51:36,906 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 13:51:37,086 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 13:51:37,087 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3841 ms
+2024-06-13 13:51:37,504 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 13:51:37,634 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 13:51:37,640 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 13:51:37,864 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 13:51:38,073 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 13:51:38,101 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 13:51:38,340 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ce2029b
+2024-06-13 13:51:38,345 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 13:51:38,427 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 13:51:39,267 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 13:51:41,183 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 13:51:41,234 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7320bccc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 13:51:42,025 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 13:51:42,505 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 13:51:46,625 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 13:51:47,346 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 13:51:47,447 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@59c9e3b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45bedfed, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c4b5d13, org.springframework.security.web.header.HeaderWriterFilter@124bc9fa, org.springframework.security.web.authentication.logout.LogoutFilter@5ace2ce3, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@29e40db1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23707d5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fa49615, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7269674d, org.springframework.security.web.session.SessionManagementFilter@45a33515, org.springframework.security.web.access.ExceptionTranslationFilter@2313c291, org.springframework.security.web.access.intercept.AuthorizationFilter@6acec4a1]
+2024-06-13 13:51:48,236 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 13:51:48,249 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 15.712 seconds (process running for 17.05)
+2024-06-13 13:51:49,202 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(2)-192.168.1.4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 13:51:49,202 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.1.4] Initializing Servlet 'dispatcherServlet'
+2024-06-13 13:51:49,255 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.1.4] Completed initialization in 53 ms
+2024-06-13 14:01:42,648 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 14:01:42,651 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-13 14:01:42,676 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 14:01:49,341 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 11388 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 14:01:49,344 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 14:01:51,182 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 14:01:51,523 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 332 ms. Found 31 JPA repository interfaces.
+2024-06-13 14:01:52,562 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 14:01:52,582 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 14:01:52,583 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 14:01:52,730 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 14:01:52,731 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3324 ms
+2024-06-13 14:01:53,088 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 14:01:53,217 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 14:01:53,219 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 14:01:53,421 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 14:01:53,590 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 14:01:53,611 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 14:01:53,809 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@493968a9
+2024-06-13 14:01:53,812 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 14:01:53,888 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 14:01:54,303 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 14:01:55,646 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 14:01:55,677 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cb654e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 14:01:56,195 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 14:01:56,591 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 14:02:00,135 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 14:02:00,706 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 14:02:00,798 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@bbe07e5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c089fbc, org.springframework.security.web.context.SecurityContextPersistenceFilter@56e0e953, org.springframework.security.web.header.HeaderWriterFilter@48f27e0b, org.springframework.security.web.authentication.logout.LogoutFilter@7c63146c, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@2fd16368, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39c821c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6cd9cafb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e5259c0, org.springframework.security.web.session.SessionManagementFilter@5b0af511, org.springframework.security.web.access.ExceptionTranslationFilter@7d33e32b, org.springframework.security.web.access.intercept.AuthorizationFilter@64027866]
+2024-06-13 14:02:01,392 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 14:02:01,407 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 12.613 seconds (process running for 13.7)
+2024-06-13 14:02:02,562 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(3)-192.168.1.4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 14:02:02,563 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.1.4] Initializing Servlet 'dispatcherServlet'
+2024-06-13 14:02:02,571 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.1.4] Completed initialization in 6 ms
+2024-06-13 14:06:34,475 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 14:06:34,489 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-13 14:06:34,515 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 14:06:41,593 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 15080 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 14:06:41,595 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 14:06:43,382 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 14:06:43,721 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 326 ms. Found 31 JPA repository interfaces.
+2024-06-13 14:06:44,604 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 14:06:44,618 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 14:06:44,619 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 14:06:44,772 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 14:06:44,773 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3123 ms
+2024-06-13 14:06:45,147 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 14:06:45,218 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 14:06:45,223 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 14:06:45,397 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 14:06:45,549 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 14:06:45,567 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 14:06:45,822 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7977f046
+2024-06-13 14:06:45,824 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 14:06:45,889 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 14:06:46,362 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 14:06:47,659 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 14:06:47,720 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d140627] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 14:06:48,360 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 14:06:48,759 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 14:06:52,233 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 14:06:52,837 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 14:06:52,920 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b2235a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5af6378e, org.springframework.security.web.context.SecurityContextPersistenceFilter@48f27e0b, org.springframework.security.web.header.HeaderWriterFilter@201cc412, org.springframework.security.web.authentication.logout.LogoutFilter@59c9e3b9, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@7f6ba409, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26562718, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1388c465, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@205b3a1a, org.springframework.security.web.session.SessionManagementFilter@40699137, org.springframework.security.web.access.ExceptionTranslationFilter@6253df71, org.springframework.security.web.access.intercept.AuthorizationFilter@2f75c413]
+2024-06-13 14:06:53,599 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 14:06:53,614 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 12.58 seconds (process running for 13.629)
+2024-06-13 14:06:54,808 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(3)-192.168.1.4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 14:06:54,809 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.1.4] Initializing Servlet 'dispatcherServlet'
+2024-06-13 14:06:54,815 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.1.4] Completed initialization in 5 ms
+2024-06-13 14:49:11,686 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m55s560ms184µs200ns).
+2024-06-13 15:55:22,084 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m40s381ms594µs800ns).
+2024-06-13 16:31:22,270 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 16:31:22,283 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-13 16:31:22,300 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 16:31:30,749 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 5548 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 16:31:30,752 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 16:31:33,071 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 16:31:33,407 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 325 ms. Found 31 JPA repository interfaces.
+2024-06-13 16:31:34,440 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 16:31:34,455 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 16:31:34,457 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 16:31:34,590 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 16:31:34,590 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3766 ms
+2024-06-13 16:31:34,949 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 16:31:35,085 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 16:31:35,088 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 16:31:35,311 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 16:31:35,480 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 16:31:35,507 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 16:31:35,777 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67b3960b
+2024-06-13 16:31:35,782 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 16:31:35,871 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 16:31:36,329 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 16:31:37,750 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 16:31:37,786 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6be865c1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 16:31:38,356 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 16:31:38,868 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 16:31:43,032 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 16:31:43,732 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 16:31:43,882 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45bedfed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7269674d, org.springframework.security.web.context.SecurityContextPersistenceFilter@201cc412, org.springframework.security.web.header.HeaderWriterFilter@68b5a37d, org.springframework.security.web.authentication.logout.LogoutFilter@39c821c6, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@3d2e1d18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fa49615, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7921eb37, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@187b33de, org.springframework.security.web.session.SessionManagementFilter@7effa21e, org.springframework.security.web.access.ExceptionTranslationFilter@5d0d1e50, org.springframework.security.web.access.intercept.AuthorizationFilter@24a26847]
+2024-06-13 16:31:44,756 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 16:31:44,782 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 14.609 seconds (process running for 15.823)
+2024-06-13 16:31:46,042 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(2)-192.168.0.126] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 16:31:46,042 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.0.126] Initializing Servlet 'dispatcherServlet'
+2024-06-13 16:31:46,047 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(2)-192.168.0.126] Completed initialization in 5 ms
+2024-06-13 16:47:05,486 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 16:47:05,511 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-13 16:47:05,542 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-13 16:47:12,195 INFO ma.zs.rh.RhApplication [main] Starting RhApplication using Java 21.0.2 with PID 21588 (C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3\target\classes started by youne in C:\Users\youne\Documents\COURS SIR 24\Stage\Sujet\Implémentation\Gestion Agent v7\backend-v3)
+2024-06-13 16:47:12,197 INFO ma.zs.rh.RhApplication [main] The following 1 profile is active: "dev"
+2024-06-13 16:47:14,167 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 16:47:14,484 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 307 ms. Found 31 JPA repository interfaces.
+2024-06-13 16:47:15,538 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8036 (http)
+2024-06-13 16:47:15,550 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-13 16:47:15,551 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-13 16:47:15,687 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-13 16:47:15,687 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3438 ms
+2024-06-13 16:47:16,027 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 16:47:16,121 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-13 16:47:16,124 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-06-13 16:47:16,337 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 16:47:16,515 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 16:47:16,536 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-13 16:47:16,735 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f17dd06
+2024-06-13 16:47:16,737 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-13 16:47:16,796 WARN org.hibernate.dialect.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-06-13 16:47:17,211 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2024-06-13 16:47:18,470 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-13 16:47:18,514 INFO org.hibernate.orm.connections.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d140627] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-06-13 16:47:19,022 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 16:47:19,411 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-13 16:47:22,725 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 16:47:23,327 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 4 endpoint(s) beneath base path '/actuator'
+2024-06-13 16:47:23,400 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3662309d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f75c413, org.springframework.security.web.context.SecurityContextPersistenceFilter@65bd41d8, org.springframework.security.web.header.HeaderWriterFilter@45a33515, org.springframework.security.web.authentication.logout.LogoutFilter@3faadc24, ma.zs.rh.zbiblio.security.jwt.AuthTokenFilter@402d443d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d33e32b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47ce44ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61f990b, org.springframework.security.web.session.SessionManagementFilter@71da8575, org.springframework.security.web.access.ExceptionTranslationFilter@22a7d2f2, org.springframework.security.web.access.intercept.AuthorizationFilter@616f1c2e]
+2024-06-13 16:47:24,032 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8036 (http) with context path ''
+2024-06-13 16:47:24,045 INFO ma.zs.rh.RhApplication [main] Started RhApplication in 12.444 seconds (process running for 13.553)
+2024-06-13 16:47:24,793 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(3)-192.168.0.126] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 16:47:24,793 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.0.126] Initializing Servlet 'dispatcherServlet'
+2024-06-13 16:47:24,798 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.0.126] Completed initialization in 4 ms

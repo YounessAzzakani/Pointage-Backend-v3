@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface PointageAgentService {
 
 
+    List<Pointage> findByOwner();
 
     List<Pointage> findByAgentId(Long id);
     int deleteByAgentId(Long id);

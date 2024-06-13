@@ -26,7 +26,7 @@ public class EntityListener implements Serializable {
         auditBusinessObject.setUpdatedBy(getCurrentUser());
     }
 
-    public String getCurrentUser() {
+    public static String getCurrentUser() {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             Object currentUser = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             if (currentUser != null && currentUser instanceof String) {

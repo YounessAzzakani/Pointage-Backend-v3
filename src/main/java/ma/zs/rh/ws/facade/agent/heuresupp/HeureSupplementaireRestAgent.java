@@ -25,6 +25,14 @@ import java.util.List;
 public class HeureSupplementaireRestAgent {
 
 
+    @Operation(summary = "Finds a heureSupplementaire by agent reference")
+    @GetMapping("owner")
+    public List<HeureSupplementaireDto> findByOwner() {
+        List<HeureSupplementaire> byOwner = service.findByOwner();
+        converter.getAgentConverter();
+        List<HeureSupplementaireDto> dto = converter.toDto(byOwner);
+        return dto;
+    }
 
 
     @Operation(summary = "Finds a list of all heureSupplementaires")

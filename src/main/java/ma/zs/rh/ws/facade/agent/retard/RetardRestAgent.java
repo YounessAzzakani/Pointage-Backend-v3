@@ -1,6 +1,8 @@
 package  ma.zs.rh.ws.facade.agent.retard;
 
 import io.swagger.v3.oas.annotations.Operation;
+import ma.zs.rh.bean.core.pointage.Pointage;
+import ma.zs.rh.ws.dto.pointage.PointageDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,14 @@ import java.util.List;
 public class RetardRestAgent {
 
 
+    @Operation(summary = "Finds a pointage by agent reference")
+    @GetMapping("owner")
+    public List<RetardDto> findByOwner() {
+        List<Retard> byOwner = service.findByOwner();
+        converter.getAgentConverter();
+        List<RetardDto> dto = converter.toDto(byOwner);
+        return dto;
+    }
 
 
     @Operation(summary = "Finds a list of all retards")

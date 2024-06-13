@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface DemandeCongeAgentService {
 
 
+    List<DemandeConge> findByOwner();
 
     List<DemandeConge> findByMotifRejetDemandeCongeId(Long id);
     int deleteByMotifRejetDemandeCongeId(Long id);

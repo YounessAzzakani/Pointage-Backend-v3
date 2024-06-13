@@ -1,6 +1,9 @@
 package ma.zs.rh.service.impl.agent.pointage;
 
 
+import ma.zs.rh.bean.core.commun.Agent;
+import ma.zs.rh.bean.core.heuresupp.HeureSupplementaire;
+import ma.zs.rh.zbiblio.audit.EntityListener;
 import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.pointage.Pointage;
 import ma.zs.rh.dao.criteria.core.pointage.PointageCriteria;
@@ -27,6 +30,15 @@ import ma.zs.rh.service.facade.agent.commun.AgentAgentService ;
 @Service
 public class PointageAgentServiceImpl implements PointageAgentService {
 
+
+    @Override
+    public List<Pointage> findByOwner() {
+        String username = EntityListener.getCurrentUser();
+        if (username == null) return List.of();
+        Agent agent = agentService.findByUsername(username);
+        if (agent == null) return List.of();
+        return dao.findByAgentId(agent.getId());
+    }
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public Pointage update(Pointage t) {

@@ -30,6 +30,15 @@ public class DemandeAbsenceRestAgent {
         return service.findByAgentRef(ref);
     }
 
+    @Operation(summary = "Finds a demandeAbsence by agent reference")
+    @GetMapping("owner")
+    public List<DemandeAbsenceDto> findByOwner() {
+        List<DemandeAbsence> byOwner = service.findByOwner();
+        converter.getAgentConverter();
+        List<DemandeAbsenceDto> dto = converter.toDto(byOwner);
+        return dto;
+    }
+
     @Operation(summary = "Finds a list of all demandeAbsences")
     @GetMapping("")
     public ResponseEntity<List<DemandeAbsenceDto>> findAll() throws Exception {

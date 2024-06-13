@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface RetardAgentService {
 
 
+    List<Retard> findByOwner();
 
     List<Retard> findByAgentId(Long id);
     int deleteByAgentId(Long id);

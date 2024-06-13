@@ -1,6 +1,8 @@
 package ma.zs.rh.service.impl.agent.abssence;
 
 
+import ma.zs.rh.bean.core.commun.Agent;
+import ma.zs.rh.zbiblio.audit.EntityListener;
 import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.abssence.DemandeAbsence;
 import ma.zs.rh.dao.criteria.core.abssence.DemandeAbsenceCriteria;
@@ -30,6 +32,16 @@ import ma.zs.rh.service.facade.agent.abssence.MotifRejetDemandeAbsenceAgentServi
 
 @Service
 public class DemandeAbsenceAgentServiceImpl implements DemandeAbsenceAgentService {
+
+    @Override
+    public List<DemandeAbsence> findByOwner() {
+        String username = EntityListener.getCurrentUser();
+        if (username == null) return List.of();
+        Agent agent = agentService.findByUsername(username);
+        if (agent == null) return List.of();
+        return dao.findByAgentId(agent.getId());
+    }
+
 
     @Override
     public List<DemandeAbsence> findByAgentRef(String ref) {

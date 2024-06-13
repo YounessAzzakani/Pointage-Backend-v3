@@ -1,6 +1,9 @@
 package ma.zs.rh.service.impl.agent.conge;
 
 
+import ma.zs.rh.bean.core.abssence.DemandeAbsence;
+import ma.zs.rh.bean.core.commun.Agent;
+import ma.zs.rh.zbiblio.audit.EntityListener;
 import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.conge.DemandeConge;
 import ma.zs.rh.dao.criteria.core.conge.DemandeCongeCriteria;
@@ -30,6 +33,16 @@ import ma.zs.rh.service.facade.agent.conge.RaisonCongeAgentService ;
 
 @Service
 public class DemandeCongeAgentServiceImpl implements DemandeCongeAgentService {
+
+
+    @Override
+    public List<DemandeConge> findByOwner() {
+        String username = EntityListener.getCurrentUser();
+        if (username == null) return List.of();
+        Agent agent = agentService.findByUsername(username);
+        if (agent == null) return List.of();
+        return dao.findByAgentId(agent.getId());
+    }
 
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)

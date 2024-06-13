@@ -1,6 +1,13 @@
 package ma.zs.rh.service.impl.agent.heuresupp;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import ma.zs.rh.bean.core.abssence.DemandeAbsence;
+import ma.zs.rh.bean.core.commun.Agent;
+import ma.zs.rh.bean.core.conge.DemandeConge;
+import ma.zs.rh.ws.dto.abssence.DemandeAbsenceDto;
+import ma.zs.rh.ws.dto.heuresupp.HeureSupplementaireDto;
+import ma.zs.rh.zbiblio.audit.EntityListener;
 import ma.zs.rh.zbiblio.exception.EntityNotFoundException;
 import ma.zs.rh.bean.core.heuresupp.HeureSupplementaire;
 import ma.zs.rh.dao.criteria.core.heuresupp.HeureSupplementaireCriteria;
@@ -13,6 +20,7 @@ import java.util.ArrayList;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import ma.zs.rh.zbiblio.util.RefelexivityUtil;
@@ -30,6 +38,15 @@ import ma.zs.rh.service.facade.agent.heuresupp.TypeHeureSupplementaireAgentServi
 @Service
 public class HeureSupplementaireAgentServiceImpl implements HeureSupplementaireAgentService {
 
+
+    @Override
+    public List<HeureSupplementaire> findByOwner() {
+        String username = EntityListener.getCurrentUser();
+        if (username == null) return List.of();
+        Agent agent = agentService.findByUsername(username);
+        if (agent == null) return List.of();
+        return dao.findByAgentId(agent.getId());
+    }
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public HeureSupplementaire update(HeureSupplementaire t) {

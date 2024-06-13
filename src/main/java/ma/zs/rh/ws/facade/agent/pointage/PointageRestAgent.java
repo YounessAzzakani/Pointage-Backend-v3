@@ -1,6 +1,8 @@
 package  ma.zs.rh.ws.facade.agent.pointage;
 
 import io.swagger.v3.oas.annotations.Operation;
+import ma.zs.rh.bean.core.heuresupp.HeureSupplementaire;
+import ma.zs.rh.ws.dto.heuresupp.HeureSupplementaireDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,14 @@ import java.util.List;
 public class PointageRestAgent {
 
 
+    @Operation(summary = "Finds a pointage by agent reference")
+    @GetMapping("owner")
+    public List<PointageDto> findByOwner() {
+        List<Pointage> byOwner = service.findByOwner();
+        converter.getAgentConverter();
+        List<PointageDto> dto = converter.toDto(byOwner);
+        return dto;
+    }
 
 
     @Operation(summary = "Finds a list of all pointages")

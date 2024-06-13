@@ -1,6 +1,8 @@
 package  ma.zs.rh.ws.facade.agent.conge;
 
 import io.swagger.v3.oas.annotations.Operation;
+import ma.zs.rh.bean.core.abssence.DemandeAbsence;
+import ma.zs.rh.ws.dto.abssence.DemandeAbsenceDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -26,6 +28,16 @@ public class DemandeCongeRestAgent {
 
 
 
+    @Operation(summary = "Finds a demandeConge by agent reference")
+    @GetMapping("owner")
+    public List<DemandeCongeDto> findByOwner() {
+        List<DemandeConge> byOwner = service.findByOwner();
+        converter.getAgentConverter();
+        List<DemandeCongeDto> dto = converter.toDto(byOwner);
+        return dto;
+    }
+    
+    
 
     @Operation(summary = "Finds a list of all demandeConges")
     @GetMapping("")
